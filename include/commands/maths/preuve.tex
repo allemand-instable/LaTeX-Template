@@ -17,11 +17,11 @@
 
 
 
-\newcommand{\preuve}[1][ ]{%
+\newcommand{\preuve}[1]{%
     \begin{leftbar}%
         \begin{proof}%
         \textsf{}%
-        \bigksip%
+        \bigskip%
         #1%
         \end{proof}%
     \end{leftbar}%
@@ -35,7 +35,7 @@
 \begin{minipage}{0.895\linewidth}%
     \begin{leftbar}%
         \begin{proof}%
-            [#1]%
+            [\faAngleRight \, \fbox{#1}]%
             \textsf{ }%
             \bigskip%
             #2%
