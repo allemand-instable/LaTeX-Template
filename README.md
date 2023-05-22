@@ -15,6 +15,7 @@
 - url
 - pgfplots
 - stmaryrd
+- mathtools
 
 ### fonts
 
