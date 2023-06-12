@@ -1,3 +1,4 @@
 {
-    "workbench.colorTheme": "Atom Colorful Material"
+    "workbench.colorTheme": "xxtereshko-light",
+    "explorer.excludeGitIgnore": true
 }

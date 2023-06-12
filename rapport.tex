@@ -1,12 +1,13 @@
 \documentclass[11pt]{report}
 % packages and definitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{include/include.tex}
+\input{settings.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\auteur}{Allemand Instable}
-\newcommand{\articletitle}{TITLE}
-\newcommand{\customdate}{22 Mai 2022}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ❓ when there is no bibliography to cite
+\nocite{*}
+% ❓ —————————————————————————————————————
 
 
 \dominitoc
@@ -26,15 +27,12 @@
 \tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%% DEBUT CHAPITRES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{content/chapter_1/main.tex}
-
-
-
 \input{content/chapter_2/main.tex}
 \input{content/chapter_3/main.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%% FIN CHAPITRES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-example citation \cite{pmle}
 \typeout{}
 \bibliography{bibliography/main}
 
 \end{document}
+
