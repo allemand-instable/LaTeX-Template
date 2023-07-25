@@ -1,0 +1,9 @@
+rm *.mtc*
+rm *.out
+rm *.synctex*
+rm *.toc
+rm *.blg
+rm *.bbl
+rm *.maf
+rm *.aux
+rm *.log
