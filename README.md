@@ -33,9 +33,9 @@ zsh watch.zsh
 ### definition
 
 - `\famfinie[var] {from} {to}`
-    - exemple : `\famfinie[k] x 1 M` : <img style="height : 2.3em;" src="./desc_img/famfinie.png"/>
-- `\statrang X N i` : <img style="height : 2.3em;" src="./desc_img/statrang.png"/>
-- `\suitestatrang X 1 M` : <img style="height : 2.3em;" src="./desc_img/suitestatrang.png"/>
+    - exemple : `\famfinie[k] x 1 M` : <img style="height : 2.3em; vertical-align:middle" src="./desc_img/famfinie.png"/>
+- <span>`\statrang X N i` :</span> <img style="height : 2.3em; vertical-align:middle" src="./desc_img/statrang.png"/>
+- `\suitestatrang X 1 M` : <img style="height : 2.3em; vertical-align:middle" src="./desc_img/suitestatrang.png"/>
 
 
 ### convergence :
@@ -48,27 +48,27 @@ usage : `\cmd [var] [where it tends to]`
 - `\cvL [nb]` : convergence dans 𝕃ᴾ
 - `\cvetr` : convergence étroite de mesure
 - `\cvnorme [norm sub symbol]` : convergence pour la norme spécifiée
-    - exemple : `\cvnorme \infty x 0` : <img style="height : 2.3em;" src="./desc_img/cvnorme.png"/>
+    - <span>exemple : `\cvnorme \infty x 0` :</span> <img style="height : 2.3em; vertical-align:middle" src="./desc_img/cvnorme.png"/>
 - `\cvpp [μ]` : convergence μ-presque partout
 
 - `\tendset` 
-    - exemple : `\tendset x \infty A` <img style="height : 2.3em;" src="./desc_img/tendset.png"/>
+    - <span>exemple : `\tendset x \infty A`</span> <img style="height : 2.3em; vertical-align:middle" src="./desc_img/tendset.png"/>
 
 ### operators / functions / ... :
 
 - `\indicatrice [ensemble]`
-    - exemple : `\indicatrice {|f| < \alpha}` : <img style="height : 2.3em;" src="./desc_img/indicatrice.png"/>
+    - <span> exemple : `\indicatrice {|f| < \alpha}` :</span> <img style="height : 2.3em; vertical-align:middle" src="./desc_img/indicatrice.png"/>
 - `\norme [norm sub symbol] [vector]`
 - `\distnorme [norm sub symbol] [vector 1] [vector 2]`
 - `\prodscal [vector 1] [vector 2]` : ⟨ x | y ⟩
 - `\prodscalselon [sub symbol] [vector 1] [vector 2]` : 
-    - exemple : `\prodscalselon G x y` : <img style="height : 2.3em;" src="./desc_img/prodscalselon.png"/>
+    - <span>exemple : `\prodscalselon G x y` :</span> <img style="height : 2.3em; vertical-align:middle" src="./desc_img/prodscalselon.png"/>
 - `\arg(min/max)\limits_{ ... }`
-    - exemple : `\argmin\limits_{u \in \Delta} \| Y - X \beta \|` : <img style="height : 2.3em;" src="./desc_img/argmin.png"/>
+    - <span> exemple : `\argmin\limits_{u \in \Delta} \| Y - X \beta \|` : </span> <img style="height : 2.3em; vertical-align:middle" src="./desc_img/argmin.png"/>
 - `\inverse [stuff]` : A⁻¹
-- `\isdef` : <img style="width : 1em;" src="./desc_img/isdef.png"/>
+- `\isdef` : <img style="width : 1em; vertical-align:middle" src="./desc_img/isdef.png"/>
 - `\positive [stuff]` : 
-    - exemple : `\positive{ x- \frac{\log u}{n - p + 1}}` <img style="height : 2.3em;" src="./desc_img/positive.png"/>
+    - <span>exemple : `\positive{ x- \frac{\log u}{n - p + 1}}`</span> <img style="height : 2.3em; vertical-align:middle" src="./desc_img/positive.png"/>
 
 
 ### probability :
@@ -79,10 +79,10 @@ usage : `\cmd [var] [where it tends to]`
 - `\esperance [of what]` : 𝔼[ ... ]
 - `\variance [of what]` : 𝕍[ ... ]
 - `\esperanceloi [loi] [of what]` 
-    - exemple : `\esperanceloi {X|Y} {\frac{U_n}{\pi}}` : <img style="height : 2.3em;" src="./desc_img/esperanceloi.png"/>
+    - exemple : `\esperanceloi {X|Y} {\frac{U_n}{\pi}}` : <img style="height : 2.3em; vertical-align:middle" src="./desc_img/esperanceloi.png"/>
 - `\esperancesachant [of what] [condition]` : 𝔼[ ... | ... ]
 - `\esploisach [loi] [of what] [condition]` : 𝔼[ ... | ... ]
-    - exemple : `\esploisach {X|Y} {\frac{U_n}{\pi}} {Y \leq 1}` : <img style="height : 2.3em;" src="./desc_img/esploisach.png"/>
+    - exemple : `\esploisach {X|Y} {\frac{U_n}{\pi}} {Y \leq 1}` : <img style="height : 2.3em; vertical-align:middle" src="./desc_img/esploisach.png"/>
 
 
 ### generic
