@@ -2,6 +2,7 @@
 \usepackage{multirow}
 \usepackage[top=1.5cm,bottom=1.5cm,margin=2.5cm]{geometry}
 \usepackage{tikz}
+\usepackage{tikz-cd}
 
 %%%%%%% left bars
 %% https://latex.org/forum/viewtopic.php?t=5580
@@ -12,8 +13,10 @@
 
 %    BOXES
 \usepackage{awesomebox}
-
 % code syntax highlight
 % use pdflatex --shell-escape
 % latexmk -pdf -time -silent -pvc -bibtex
-\usepackage[cache=false]{minted}
+
+
+% https://tex.stackexchange.com/questions/39147/scale-image-to-page-width
+\usepackage{changepage}

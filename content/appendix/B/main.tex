@@ -2,8 +2,8 @@
 
 \section*{données fonctionnelles pour le praticien}
 
-
-\begin{minted}[linenos=true, mathescape=true, frame=single, breaklines]{R}
+\ifnum\value{code}=1
+	\begin{minted}[linenos=true, mathescape=true, frame=single, breaklines]{R}
     # ——— install ——— #
     install.packages(c("fda", "fda.usc"))
     # ——— general packages ——— #
@@ -12,9 +12,10 @@
     library(fda)
     library(fda.usc)
 \end{minted}
+\fi
 
-
-\begin{minted}[linenos=true, mathescape, frame=single, breaklines]{R} 
+\ifnum\value{code}=1
+	\begin{minted}[linenos=true, mathescape, frame=single, breaklines]{R} 
 # |     date      | $X_1$ | $X_2$ | $\cdots$ | $X_p$ |
 # | Jan 1st 12:00 | $\vdots$   | $\vdots$   |     | $\vdots$   |
 data <- fread("data.csv")
@@ -31,8 +32,10 @@ fdata_standard_index <- fda.usc::fdata(
     )
 )
 \end{minted}
+\fi
 
-\begin{minted}[linenos=true, mathescape, frame=single, breaklines]{R}
+\ifnum\value{code}=1
+	\begin{minted}[linenos=true, mathescape, frame=single, breaklines]{R}
 nb_points <- ncol(fdata)
 nb_ts <- nrow(fdata)
  
@@ -46,9 +49,10 @@ fda_optim_basis <- fda.usc::optim.basis(
     verbose = TRUE
 )
 \end{minted}
+\fi
 
-
-\begin{minted}[linenos=true, mathescape, frame=single, breaklines]{R}
+\ifnum\value{code}=1
+	\begin{minted}[linenos=true, mathescape, frame=single, breaklines]{R}
 fda_optimal_basis <- ...
 fdata_obj_temp <- fda_optimal_basis[["fdata.est"]]
 fdata_obj <- fda.usc::fdata2fd(fdata_obj_temp)
@@ -59,22 +63,26 @@ fpca_result <- fda::pca.fd(
     centerfns = TRUE
 )
 \end{minted}
+\fi
 
-Regardons désormais à quoi ressemble la sortie : 
+Regardons désormais à quoi ressemble la sortie :
 
-\mintinline{R}{fpca_result$scores} $ = \quad
-\begin{array}{cc}
-& \longrightarrow[\phi_k] \\
-\downarrow[X_i] & 
-\begin{bmatrix}
-\ddots & \cdots & \vdots \\
-\vdots & \xi_i^{[k]} = \langle X_i - \mu | \phi_k \rangle & \vdots \\
-\cdots & \cdots & \ddots \\
-\end{bmatrix}
-\end{array}
-$
+\ifnum\value{code}=1
+	\mintinline{R}{fpca_result$scores} $ = \quad
+		\begin{array}{cc}
+			                & \longrightarrow[\phi_k] \\
+			\downarrow[X_i] &
+			\begin{bmatrix}
+				\ddots & \cdots                                           & \vdots \\
+				\vdots & \xi_i^{[k]} = \langle X_i - \mu | \phi_k \rangle & \vdots \\
+				\cdots & \cdots                                           & \ddots \\
+			\end{bmatrix}
+		\end{array}
+	$
+\fi
 
-\begin{minted}[linenos=true, mathescape, frame=single, breaklines]{R}
+\ifnum\value{code}=1
+	\begin{minted}[linenos=true, mathescape, frame=single, breaklines]{R}
 list(
         fpca_result = fpca_result,
         scores = fpca_result$scores,
@@ -82,3 +90,4 @@ list(
         explained_variance = fpca_result$varprop
     )
 \end{minted}
+\fi

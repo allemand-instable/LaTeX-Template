@@ -1,18 +1,16 @@
 \graphicspath{{Images/}} %le chemin vers les images
 
 \pgfplotsset{compat = newest,
-soldot/.style={color=flatuicolors_green,only marks,mark=*},
-    holdot/.style={color=flatuicolors_green,fill=white,only marks,mark=*}}
+	soldot/.style={color=flatuicolors_green,only marks,mark=*},
+	holdot/.style={color=flatuicolors_green,fill=white,only marks,mark=*}}
 
 \setlength{\footnotesep}{1.5em}
 
 \renewcommand{\footnoterule}{%
-  \kern -3pt
-  \hrule width \textwidth height 1pt
-  \kern 2pt
+	\kern -3pt
+	\hrule width \textwidth height 1pt
+	\kern 2pt
 }
-
-% \usemintedstyle{one-dark}
 
 \renewcommand{\theparagraph}{\thesubsection \quad \small{\faSquare[regular]} \, \Alph{subsubsection}.\alph{paragraph}$\rangle$}
 \renewcommand{\thesubsubsection}{\thesubsection \quad \small{\faSquare[regular]} \, \Alph{subsubsection}$\rangle$}

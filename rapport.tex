@@ -1,37 +1,38 @@
 \documentclass[11pt]{report}
-% packages and definitions
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ⚠️ DO NOT TOUCH ————————————
+% * include and settings
 \input{include/include.tex}
 \input{settings.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ⚠️ —————————————————————————
 
-% ❓ when there is no bibliography to cite
+
+% ⚠️ USE WHEN NO CITATION FROM BIB
 \nocite{*}
-% ❓ —————————————————————————————————————
+% ⚠️ —————————————————————————
 
 
 \dominitoc
 \begin{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%% INCLUDE COMMAND %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%% AND DEFAULTS PARAMETERS %%%%%%%%%%%%%%%%%%%%%%%%%
-\input{include/commands.tex}
-\input{include/default_params.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%% DEBUT COURVERTURE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{content/couverture/main.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%% FIN COURVERTURE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%% DEBUT ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{content/abstract.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%% FIN ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Ici on insère la table des matières (entre astract et les chapitres)
+% ⚠️ DO NOT TOUCH ——————————————
+% * document environment commands
+% ⚙️ INCLUDE COMMAND
+\include{include/commands.tex}
+% ⚙️ COURVERTURE 
+\include{content/couverture/main.tex}
+% ⚙️ ABSTRACT
+\include{content/abstract.tex}
+% ⚙️ ToC
 \tableofcontents
-%%%%%%%%%%%%%%%%%%%%%%%%% DEBUT CHAPITRES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{content/chapter_1/main.tex}
-\input{content/chapter_2/main.tex}
-\input{content/chapter_3/main.tex}
+% ⚠️ ———————————————————————————
+
+% ~ CONTENT ——————————————————————————
+\include{content/chapter_1/main.tex}
+\include{content/chapter_2/main.tex}
+\include{content/chapter_3/main.tex}
 \appendix
-\input{content/appendix/main.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%% FIN CHAPITRES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{content/appendix/main.tex}
+% ~ ——————————————————————————————————
+
 
 \typeout{}
 \bibliography{bibliography/main}

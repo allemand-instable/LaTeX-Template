@@ -1,5 +1,5 @@
 \newcommand{\indicatrice}[1]{\mathds 1 _{#1}}
-\newcommand{\norme}[2][]{\lVert \, #2 \, \rVert _ {#1}}
+\newcommand{\norme}[2]{\lVert \, #2 \, \rVert _ {#1}}
 \newcommand{\dist}[2]{ \ \lVert #1 - #2 \rVert \ }
 \newcommand{\distnorme}[3]{ \norme{#1}{#2 - #3}}
 
@@ -19,3 +19,7 @@
 \newcommand{\pgcd}[2]{\operatorname{pgcd}\left( \, #1 , \, #2 \, \right)}
 
 \newcommand{\positive}[1]{\left[ \, #1 \, \right]_+}
+
+\newcommand{\func}[4]{%
+	\begin{array}{ccc} #1 &\longrightarrow& #2 \\ #3 &\longmapsto& #4 \end{array}
+}%
