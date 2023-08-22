@@ -33,6 +33,7 @@
 \theoremstyle{def_style}
 
 \newtheorem{definition}{Définition}
+\newtheorem*{definition*}{Définition}
 
 %% ========================================= %%
 
@@ -41,11 +42,15 @@
 \newtheorem{thm}{Théorème}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{lem}[thm]{Lemme}
+\newtheorem{cor}{Corollaire}
 \newtheorem*{thm*}{Théorème}
 \newtheorem*{propriete*}{Propriété}
-\newtheorem*{cor}{Corollaire}
+\newtheorem*{cor*}{Corollaire}
+\newtheorem*{prop*}[thm]{Proposition}
+\newtheorem*{lem*}[thm]{Lemme}
 
 \newtheorem{exo}{Exercice}
+\newtheorem*{exo*}{Exercice}
 
 \newtheoremstyle{rem_style}%                % Name
 {5pt}%                                     % Space above
@@ -60,5 +65,6 @@
 
 \theoremstyle{rem_style}
 \newtheorem*{rem}{Remarque}
+
 
 %% ========================================= %%
