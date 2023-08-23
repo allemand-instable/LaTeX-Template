@@ -19,10 +19,15 @@
 \include{include/commands.tex}
 % ⚙️ COURVERTURE 
 \include{content/couverture/main.tex}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\pagenumbering{gobble}
 % ⚙️ ABSTRACT
 \include{content/abstract.tex}
 % ⚙️ ToC
 \tableofcontents
+\pagebreak
+\listoffigures
+\listofalgorithms
 % ⚠️ ———————————————————————————
 
 % ~ CONTENT ——————————————————————————
