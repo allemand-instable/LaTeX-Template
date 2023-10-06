@@ -42,24 +42,100 @@
 % 		\distnorme{\infty}{x}{y}
 \newcommand{\distnorme}[3]{ \norme{#1}{#2 - #3}}
 
-
+% & Name
+% 		\prodscal
+% & Description
+% 		Produit scalaire entre deux vecteurs ⟨x|y⟩
+% & Arguments
+% 		1: vecteur 1
+% 		2: vecteur 2
+% & Examples
+% 		\prodscal{x}{y}
 \newcommand{\prodscal}[2]{\left\langle \, #1 \, \vert \, #2 \, \right\rangle}
+% & Name
+% 		\prodscalselon
+% & Description
+% 		Produit scalaire [spécifié] entre deux vecteurs ⟨x|y⟩_∞
+% & Arguments
+% 		1: vecteur 1
+% 		2: vecteur 2
+% 		3: subscript du produit scalaire
+% & Examples
+% 		\prodscalselon{x}{y}{\infty}
+
 \newcommand{\prodscalselon}[3]{\prodscal{#1}{#2}_{#3}}
 
-% \argmax\limits_{}
+% & Name
+% 		\argmax
+% & Description
+% 		Argument maximum d'une fonction
+% & Arguments
+% 		none
+% & Examples
+% 		\argmax\limits_{u \in E}
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
 
+% & Name
+% 		\inverse
+% & Description
+% 		Inverse d'un élément : A⁻¹
+% & Arguments
+% 		1: élément
+% & Examples
+% 		\inverse{A}
 \newcommand{\inverse}[1]{#1 ^ {-1}}
 
+
 \newcommand{\isdef}{\underset {\textsf{déf}} {\equiv}}
+
+% & Name
+% 		\comm
+% & Description	
+% 		Commutant d'un ensemble d'opérateurs
+% & Arguments
+% 		1: ensemble d'opérateurs
+% & Examples
+% 		\comm{A}
 \newcommand{\comm}[1]{\operatorname{Comm}\left( #1 \right)}
+
+% & Name
+% 		\rg
+% & Description	
+% 		Rang d'un opérateur / application
+% & Arguments	
+% 		1: opérateur / application
+% & Examples	
+% 		\rg{\Chi_A}
 \newcommand{\rg}[1]{\operatorname{rg}\left( #1 \right)}
 \newcommand{\im}{\operatorname{Im}}
+
+% & Name
+% 		\pgcd
+% & Description
+% 		Plus grand commun diviseur : pgcd(a, b)
+% & Arguments
+% 		1: premier nombre
+% 		2: second nombre
+% & Examples
+% 		\pgcd{a}{b}
 \newcommand{\pgcd}[2]{\operatorname{pgcd}\left( \, #1 , \, #2 \, \right)}
 
 \newcommand{\positive}[1]{\left[ \, #1 \, \right]_+}
 
+% & Name
+% 		\func
+% & Description
+% 		Notations standarde d'une application
+%  		E → F
+%  		x ↦ f(x)
+% & Arguments
+% 		1: ensemble de départ
+% 		2: espace d'arrivée
+% 		3: variable	
+% 		4: image
+% & Examples
+% 		\func{E}{F}{x}{f(x)}
 \newcommand{\func}[4]{%
 	\begin{array}{ccc} #1 &\longrightarrow& #2 \\ #3 &\longmapsto& #4 \end{array}
 }%
