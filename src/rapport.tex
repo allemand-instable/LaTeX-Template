@@ -15,14 +15,15 @@
 % ⚙️ Table of Contents
 \dominitoc
 
+% * global commands
+% ⚙️ INCLUDE COMMAND
+\include{include/global_commands.tex}
+
 \begin{document}
 % ⚠️ DO NOT TOUCH ——————————————
 {
-    % * document environment commands
-    % ⚙️ INCLUDE COMMAND
-    \include{include/commands.tex}
     % ⚙️ COURVERTURE 
-    \input{content/couverture/main.tex}
+    \include{content/couverture/main.tex}
     % \addtocontents{toc}{\protect\thispagestyle{empty}}
     % \pagenumbering{gobble}
     \pagenumbering{Roman}
@@ -53,6 +54,11 @@
 % * ————— APPENDIX —————
 \include{content/appendix/main.tex}
 % ~ ——————————————————————————————————
+
+% ⚠️ ——— PLEASE COMMENT ME ————
+% Documentation and Testing
+\include{__docs/main.tex}
+% $ ————————————————————————————
 
 \typeout{}
 \bibliography{bibliography/main}
