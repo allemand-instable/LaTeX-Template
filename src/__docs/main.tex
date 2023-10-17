@@ -55,115 +55,103 @@ In this test we will invoke one command from each file in the commands folder.
 
 \noindent\begin{tabularx}{\linewidth}{XXXX}
 	\toprule
-	\textbf{Command} & \textbf{location} & \textbf{Description} & \textbf{Example} \\
+	\textbf{Command}                     & \textbf{location}   & \textbf{Description}                                               & \textbf{Example}          \\
 	% ————————————————————————————————————————————————————————————
-    \midrule
-    \textbf{commands/editor} \\
-    \midrule
-    
-    \mintinline{latex}{\citationrequise} & \colorize{main.tex} & Avertissement pour l'éditeur : une citation est à insérer ici & \citationrequise \\ \\
+	\midrule
+	\textbf{commands/editor}                                                                                                                                    \\
+	\midrule
 
-	\mintinline{latex}{\exemplerequis} & \colorize{main.tex} & Avertissement pour l'éditeur : un exemple est à insérer ici & \exemplerequis \\ \\
+	\mintinline{latex}{\citationrequise} & \colorize{main.tex} & Avertissement pour l'éditeur : une citation est à insérer ici      & \citationrequise          \\ \\
 
-	\mintinline{latex}{\editorwarn} & \colorize{main.tex} & Avertissement pour l'éditeur & \editorwarn{texte custom} \\ \\
+	\mintinline{latex}{\exemplerequis}   & \colorize{main.tex} & Avertissement pour l'éditeur : un exemple est à insérer ici        & \exemplerequis            \\ \\
 
-	\mintinline{latex}{\editlater} & \colorize{main.tex} & Avertissement pour l'éditeur : une modification est à apporter ici & \editlater{texte custom} \\ \\
+	\mintinline{latex}{\editorwarn}      & \colorize{main.tex} & Avertissement pour l'éditeur                                       & \editorwarn{texte custom} \\ \\
+
+	\mintinline{latex}{\editlater}       & \colorize{main.tex} & Avertissement pour l'éditeur : une modification est à apporter ici & \editlater{texte custom}  \\ \\
 	\bottomrule
-    % ————————————————————————————————————————————————————————————
+	% ————————————————————————————————————————————————————————————
 \end{tabularx}
 
-\pagebreak 
+\pagebreak
 
 \noindent\begin{tabularx}{\linewidth}{X}
 	\toprule
-	\textbf{commands/graphics/\faAsterisk} \\
+	\textbf{commands/graphics/\faAsterisk}                                                                            \\
 	\midrule
-	\textbf{Description} \\
+	\textbf{Description}                                                                                              \\
 	Displays an environment delimited with a blue line on the left, with an Info Icon located at the left of the line \\
 	\midrule
 \end{tabularx}
 \noindent\begin{tabularx}{\linewidth}{XXXX}
-	\textbf{Command} & \textbf{location} & \textbf{color} & \textbf{symbol} \\
-    \midrule
+	\textbf{Command}              & \textbf{location}         & \textbf{color}                                                                                     & \textbf{symbol}                                                                \\
+	\midrule
 
-	\mintinline{latex}{\info} & \colorize{awesomebox.tex} & \colorize[flatuicolors_blue]{\detokenize{flatuicolors_blue}} & \smallskip\textbf{symbol :} \colorize[flatuicolors_blue]{\faInfoCircle} \\ \\
+	\mintinline{latex}{\info}     & \colorize{awesomebox.tex} & \colorize[flatuicolors_blue]{\detokenize{flatuicolors_blue}}                                       & \smallskip\textbf{symbol :} \colorize[flatuicolors_blue]{\faInfoCircle}        \\ \\
 
-	\mintinline{latex}{\chk} & \colorize{awesomebox.tex} & \colorize[flatuicolors_green]{\detokenize{flatuicolors_green}} & \textbf{symbol :} \colorize[flatuicolors_green]{\faCheckCircle} \\ \\
+	\mintinline{latex}{\chk}      & \colorize{awesomebox.tex} & \colorize[flatuicolors_green]{\detokenize{flatuicolors_green}}                                     & \textbf{symbol :} \colorize[flatuicolors_green]{\faCheckCircle}                \\ \\
 
-	\mintinline{latex}{\brain} & \colorize{awesomebox.tex} & \colorize[flatuicolors_purple_light]{\detokenize{flatuicolors_purple_}
-	
-	\smallskip light} & \textbf{symbol :} \colorize[flatuicolors_purple_light]{\faBrain} \\ \\
+	\mintinline{latex}{\brain}    & \colorize{awesomebox.tex} & \colorize[flatuicolors_purple_light]{\detokenize{flatuicolors_purple_}\linebreak\smallskip light}  & \textbf{symbol :} \colorize[flatuicolors_purple_light]{\faBrain}               \\ \\
 
-	\mintinline{latex}{\warn} & \colorize{awesomebox.tex} & \colorize[flatuicolors_orange_light]{\detokenize{flatuicolors_orange_}
-	
-	\smallskip light} & \textbf{symbol :} \colorize[flatuicolors_orange_light]{\faExclamationTriangle} \\ \\
+	\mintinline{latex}{\warn}     & \colorize{awesomebox.tex} & \colorize[flatuicolors_orange_light]{\detokenize{flatuicolors_orange_}\linebreak\smallskip light}  & \textbf{symbol :} \colorize[flatuicolors_orange_light]{\faExclamationTriangle} \\ \\
 
-	\mintinline{latex}{\nope} & \colorize{awesomebox.tex} & \colorize[flatuicolors_red_light]{\detokenize{flatuicolors_red_light}} & \textbf{symbol :} \colorize[flatuicolors_red_light]{\faTimesCircle} \\ \\
+	\mintinline{latex}{\nope}     & \colorize{awesomebox.tex} & \colorize[flatuicolors_red_light]{\detokenize{flatuicolors_red_light}}                             & \textbf{symbol :} \colorize[flatuicolors_red_light]{\faTimesCircle}            \\ \\
 
-	\mintinline{latex}{\cogs} & \colorize{awesomebox.tex} & \colorize[flatuicolors_imperial]{\detokenize{flatuicolors_imperial}} & \textbf{symbol :} \colorize[flatuicolors_imperial]{\faCogs} \\ \\
+	\mintinline{latex}{\cogs}     & \colorize{awesomebox.tex} & \colorize[flatuicolors_imperial]{\detokenize{flatuicolors_imperial}}                               & \textbf{symbol :} \colorize[flatuicolors_imperial]{\faCogs}                    \\ \\
 
-	\mintinline{latex}{\citer} & \colorize{awesomebox.tex} & \colorize[flatuicolors_corn_flower]{\detokenize{flatuicolors_corn_}
-	
-	\smallskip flower} & \textbf{symbol :} \colorize[flatuicolors_corn_flower]{\faQuoteRight} \\ \\
+	\mintinline{latex}{\citer}    & \colorize{awesomebox.tex} & \colorize[flatuicolors_corn_flower]{\detokenize{flatuicolors_corn_}\linebreak\smallskip flower}    & \textbf{symbol :} \colorize[flatuicolors_corn_flower]{\faQuoteRight}           \\ \\
 
-	\mintinline{latex}{\avion} & \colorize{awesomebox.tex} & \colorize[flatuicolors_purple_dark]{\detokenize{flatuicolors_purple_}
-	
-	\smallskip dark} & \textbf{symbol :} \colorize[flatuicolors_purple_dark]{\faFighterJet} \\ \\
+	\mintinline{latex}{\avion}    & \colorize{awesomebox.tex} & \colorize[flatuicolors_purple_dark]{\detokenize{flatuicolors_purple_}\linebreak\smallskip dark}    & \textbf{symbol :} \colorize[flatuicolors_purple_dark]{\faFighterJet}           \\ \\
 
-	\mintinline{latex}{\question} & \colorize{awesomebox.tex} & \colorize[flatuicolors_aqua] {\detokenize{flatuicolors_aqua}} & \textbf{symbol :} \colorize[flatuicolors_aqua]{\faQuestionCircle} \\ \\
+	\mintinline{latex}{\question} & \colorize{awesomebox.tex} & \colorize[flatuicolors_aqua] {\detokenize{flatuicolors_aqua}}                                      & \textbf{symbol :} \colorize[flatuicolors_aqua]{\faQuestionCircle}              \\ \\
 
-	\mintinline{latex}{\idee} & \colorize{awesomebox.tex} & \colorize[flatuicolors_yellow] {\detokenize{flatuicolors_yellow}} & \textbf{symbol :} \colorize[flatuicolors_yellow]{\faLightbulb} \\ \\
+	\mintinline{latex}{\idee}     & \colorize{awesomebox.tex} & \colorize[flatuicolors_yellow] {\detokenize{flatuicolors_yellow}}                                  & \textbf{symbol :} \colorize[flatuicolors_yellow]{\faLightbulb}                 \\ \\
 
-	\mintinline{latex}{\book} & \colorize{awesomebox.tex} & \colorize[flatuicolors_orange_light] {\detokenize{flatuicolors_orange_}
+	\mintinline{latex}{\book}     & \colorize{awesomebox.tex} & \colorize[flatuicolors_orange_light] {\detokenize{flatuicolors_orange_}\linebreak\smallskip light} & \textbf{symbol :} \colorize[flatuicolors_orange_light]{\faBook}                \\ \\
 
-	\smallskip light} & \textbf{symbol :} \colorize[flatuicolors_orange_light]{\faBook} \\ \\
-
-	\mintinline{latex}{\flask} & \colorize{awesomebox.tex} & \colorize[flatuicolors_blue_devil]{\detokenize{flatuicolors_blue_}
-
-	\smallskip devil} & \textbf{symbol :} \colorize[flatuicolors_blue_devil]{\faFlask} \\
+	\mintinline{latex}{\flask}    & \colorize{awesomebox.tex} & \colorize[flatuicolors_blue_devil]{\detokenize{flatuicolors_blue_}\linebreak\smallskip devil}      & \textbf{symbol :} \colorize[flatuicolors_blue_devil]{\faFlask}                 \\
 
 	% ————————————————————————————————————————————————————————————
 	\bottomrule
 \end{tabularx}
-\pagebreak 
+\pagebreak
 
 
 
 \noindent\begin{tabularx}{\linewidth}{X}
 	\toprule
-	\textbf{commands/graphics/\faAsterisk} \\
+	\textbf{commands/graphics/\faAsterisk}                                                                            \\
 	\midrule
-	\textbf{Description} \\
+	\textbf{Description}                                                                                              \\
 	Displays an environment delimited with a blue line on the left, with an Info Icon located at the left of the line \\
 	\midrule
 \end{tabularx}
 \noindent\begin{tabularx}{\linewidth}{XXXX}
-	\textbf{Command} & \textbf{location} & \textbf{short desc.} & \textbf{Example} \\
+	\textbf{Command}                 & \textbf{location} & \textbf{short desc.}       & \textbf{Example}                           \\
 	\midrule
 	\\
-	\mintinline{latex}{\blackboxed} & blackbox.tex & black rect. box & \blackboxed{custom text} \\ \\
+	\mintinline{latex}{\blackboxed}  & blackbox.tex      & black rect. box            & \blackboxed{custom text}                   \\ \\
 
-	\mintinline{latex}{\greenboxed} & blackbox.tex & green rect. box & \greenboxed{custom text} \\ \\
+	\mintinline{latex}{\greenboxed}  & blackbox.tex      & green rect. box            & \greenboxed{custom text}                   \\ \\
 
-	\mintinline{latex}{\blueboxed} & blackbox.tex & blue rect. box & \blueboxed{custom text} \\ \\
+	\mintinline{latex}{\blueboxed}   & blackbox.tex      & blue rect. box             & \blueboxed{custom text}                    \\ \\
 
-	\mintinline{latex}{\purpleboxed} & blackbox.tex & purple rect. box & \purpleboxed{custom text} \\ \\
+	\mintinline{latex}{\purpleboxed} & blackbox.tex      & purple rect. box           & \purpleboxed{custom text}                  \\ \\
 
-	\mintinline{latex}{\orangeboxed} & blackbox.tex & orange rect. box & \orangeboxed{custom text} \\ \\
+	\mintinline{latex}{\orangeboxed} & blackbox.tex      & orange rect. box           & \orangeboxed{custom text}                  \\ \\
 
-	\mintinline{latex}{\redboxed} & blackbox.tex & red rect. box & \redboxed{custom text} \\ \\
+	\mintinline{latex}{\redboxed}    & blackbox.tex      & red rect. box              & \redboxed{custom text}                     \\ \\
 
-	\mintinline{latex}{\aquaboxed} & blackbox.tex & aqua rect. box & \aquaboxed{custom text} \\ \\
+	\mintinline{latex}{\aquaboxed}   & blackbox.tex      & aqua rect. box             & \aquaboxed{custom text}                    \\ \\
 
-	\mintinline{latex}{\icon} & blackbox.tex & fontawesome icon with text & \icon{Github}{10}{GitHub} \\ \\
-
-	\midrule
-
-	\mintinline{latex}{\circled} & circled.tex & circled text & \circled{1} \\ \\
+	\mintinline{latex}{\icon}        & blackbox.tex      & fontawesome icon with text & \icon{Github}{10}{GitHub}                  \\ \\
 
 	\midrule
 
-	\mintinline{latex}{\colorize} & colorize.tex & colored text & \colorize[flatuicolors_green]{custom text} \\ \\
+	\mintinline{latex}{\circled}     & circled.tex       & circled text               & \circled{1}                                \\ \\
+
+	\midrule
+
+	\mintinline{latex}{\colorize}    & colorize.tex      & colored text               & \colorize[flatuicolors_green]{custom text} \\ \\
 
 	\bottomrule
 \end{tabularx}
@@ -171,215 +159,232 @@ In this test we will invoke one command from each file in the commands folder.
 
 \noindent\begin{tabularx}{\linewidth}{X}
 	\toprule
-	\textbf{commands/maths/\faAsterisk} \\
+	\textbf{commands/maths/\faAsterisk}                                                               \\
 	\midrule
-	\textbf{Description} \\
+	\textbf{Description}                                                                              \\
 	The commands associated with symbols and other things for mathematics / mathematical environments \\
 	\midrule
 \end{tabularx}
 \noindent\begin{tabularx}{\linewidth}{XXXX}
-	\textbf{Command} & \textbf{location} & \textbf{short desc.} & \textbf{Example} \\
+	\textbf{Command}                                                             & \textbf{location}              & \textbf{short desc.}                               & \textbf{Example}                                 \\
 	\midrule
-	% ————————————————————————————————————————————————————————————
-	\mintinline{latex}{\cvl} & convergence.tex & convergence en loi & $u_n \cvl{n}{+\infty} \ell$ \\ \\
-
-	\mintinline{latex}{\cvp} & convergence.tex & convergence en probabilité & $u_n \cvp{n}{+\infty} \ell$ \\ \\
-
-	\mintinline{latex}{\cvps} & convergence.tex & convergence presque sûre & $u_n \cvps{n}{+\infty} \ell$ \\ \\
-
-	\mintinline{latex}{\cvL} & convergence.tex & convergence $\mathds L^p$ & $u_n \cvL{p}{n}{+\infty} \ell$ \\ \\
-
-	\mintinline{latex}{\cvetr} & convergence.tex & convergence étroite & $u_n \cvetr{n}{+\infty} \ell$ \\ \\
-
-	\mintinline{latex}{\cvnorme} & convergence.tex & convergence en norme & $u_n \cvnorme{n}{+\infty} \ell$ \\ \\
-
-	\mintinline{latex}{\cvpp} & convergence.tex & convergence presque partout & $u_n \cvpp{n}{+\infty} \ell$ \\ \\
-
-	\mintinline{latex}{\tendset} & convergence.tex & tend vers dans un ensemble & $u_n \tendset{n}{+\infty}{\mathcal F} \ell$ \\ \\
-
+	\mintinline{latex}{\P}                                                       & \detokenize{proba_lettres.tex} & Probabilité                                        & $:\P$                                            \\ \\
+	\mintinline{latex}{\E}                                                       & \detokenize{proba_lettres.tex} & Espérance                                          & $\E$                                             \\ \\
+	\mintinline{latex}{\V}                                                       & \detokenize{proba_lettres.tex} & Variance                                           & $\V$                                             \\ \\
+	\mintinline{latex}{\Q}                                                       & \detokenize{proba_lettres.tex} & Rationels                                          & $\Q$                                             \\ \\
+	\mintinline{latex}{\IR}                                                      & \detokenize{proba_lettres.tex} & Réels                                              & $\IR$                                            \\ \\
+	\mintinline{latex}{\IH}                                                      & \detokenize{proba_lettres.tex} & Hilbert                                            & $\IH$                                            \\ \\
+	\midrule                                                                                                                                                                                                              \\
+	\mintinline{latex}{\indep}                                                   & \detokenize{proba.tex}         & symbole indép                                      & $\indep$                                         \\ \\
+	\hyperref[code:samelaw]{\mintinline{latex}{\samelaw}\label{desc:samelaw} }   & \detokenize{proba.tex}         & suit la loi de                                     & $X \samelaw Z/\sigma$                            \\ \\
+	\mintinline{latex}{\proba}                                                   & \detokenize{proba.tex}         & Probabilité de                                     & $\proba{\lvert X \rvert > \varepsilon}$          \\ \\
+	\hyperref[code:probaloi]{\mintinline{latex}{\probaloi}\label{desc:probaloi}} & \detokenize{proba.tex}         & Probabilité de $[\cdot]$ selon la loi de $[\cdot]$ & $\probaloi{X | Y}{2X^2 - 7Y < \eta}$             \\ \\
+	\mintinline{latex}{\variance}                                                & \detokenize{proba.tex}         & Variance de $[\cdot]$                              & $\variance{\widehat X}$                          \\ \\
+	\mintinline{latex}{\esperance}                                               & \detokenize{proba.tex}         & Espérance de $[\cdot]$                             & $\esperance{\widehat \theta}$                    \\ \\
+	\mintinline{latex}{\esperanceloi}                                            & \detokenize{proba.tex}         & Espérance de $[\cdot]$ selon la loi de $[\cdot]$   & $\esperanceloi{Y | X}{Y - X}$                    \\ \\
+	\mintinline{latex}{\esperancesachant}                                        & \detokenize{proba.tex}         & Espérance conditionnelle                           & $\esperancesachant{X}{Y}$                        \\ \\
+	\hyperref[code:esploisach]{\mintinline{latex}{\esploisach}}\label{desc:esploisach}                                              & \detokenize{proba.tex}         & Espérance conditionnelle selon une loi             & $\esploisach{Z}{ ZU \times \log(\sigma)Z ^2}{U}$ \\ \\
+	\midrule                                                                                                                                                                                                              \\
+	\mintinline{latex}{\orthonorm}                                               & \detokenize{property.tex}      & symbol orthonormal                                 & $u \, \orthonorm \, \calF$                       \\ \\
 	\midrule
-
-	\mintinline{latex}{\intervaleint} & ensembles.tex & intervalle entier & $\intervaleint{p}{q}$ \\ \\
-
-	\mintinline{latex}{\R} & ensembles.tex & espace $\mathds R^p$ & $\R{p}$ \\ \\
-
-	\mintinline{latex}{\classespace} & ensembles.tex & espace des fonctions de classe $k$ sur un ensemble $E$ & $\classespace{k}{E}$ \\ \\
-
-	\mintinline{latex}{\continuborne} & ensembles.tex & espace des fonctions continues et bornées sur un ensemble $E$ dans $F$ & $\continuborne{E}{F}$ \\ \\
-
-	\mintinline{latex}{\continusupportcompact} &  & espace des fonctions continues à support compact sur un ensemble $E$ dans $F$ & $\continusupportcompact{E}{F}$ \\ \\
-	
-	
+	% \mintinline{latex}{} & \detokenize{proba.tex} & & $$ \\ \\
+	% \mintinline{latex}{} & \detokenize{proba.tex} & & $$ \\ \\
 \end{tabularx}
 
 
 \noindent\begin{tabularx}{\linewidth}{XXXX}
-\mintinline{latex}{\mesurable} & ensembles.tex & espace des fonctions mesurables sur un ensemble $E$ dans $F$ & $\mesurable{E}{F}$ \\ \\
+	\textbf{Command}                           & \textbf{location} & \textbf{short desc.}                                                          & \textbf{Example}                            \\
+	\midrule
+	% ————————————————————————————————————————————————————————————
+	\mintinline{latex}{\cvl}                   & convergence.tex   & convergence en loi                                                            & $u_n \cvl{n}{+\infty} \ell$                 \\ \\
 
-\mintinline{latex}{\etageepositive} & ensembles.tex & espace des fonctions etagées positives sur un ensemble $E$ dans $F$ & $\etageepositive{E}{F}$ \\ \\
+	\mintinline{latex}{\cvp}                   & convergence.tex   & convergence en probabilité                                                    & $u_n \cvp{n}{+\infty} \ell$                 \\ \\
 
-\mintinline{latex}{\VA} & ensembles.tex & espace des variables aléatoires à valeur dans $E$ & $\VA{E}$ \\ \\
+	\mintinline{latex}{\cvps}                  & convergence.tex   & convergence presque sûre                                                      & $u_n \cvps{n}{+\infty} \ell$                \\ \\
 
-\mintinline{latex}{\matrixspace} & ensembles.tex & espace des matrices carrées de taille $p \times p$ à coefficients dans $E$ & $\matrixspace{p}{E}$ \\ \\
+	\mintinline{latex}{\cvL}                   & convergence.tex   & convergence $\mathds L^p$                                                     & $u_n \cvL{p}{n}{+\infty} \ell$              \\ \\
 
-\mintinline{latex}{\orthonormal} & ensembles.tex & symbole orthonormal & $\orthonormal$ \\ \\
+	\mintinline{latex}{\cvetr}                 & convergence.tex   & convergence étroite                                                           & $u_n \cvetr{n}{+\infty} \ell$               \\ \\
 
-\mintinline{latex}{\orthonormalselon} & ensembles.tex & symbole orthonormal selon un produit scalaire & $\orthonormalselon{\mathds L^2}$ \\ \\
+	\mintinline{latex}{\cvnorme}               & convergence.tex   & convergence en norme                                                          & $u_n \cvnorme{n}{+\infty} \ell$             \\ \\
 
-\midrule
+	\mintinline{latex}{\cvpp}                  & convergence.tex   & convergence presque partout                                                   & $u_n \cvpp{n}{+\infty} \ell$                \\ \\
 
-\mintinline{latex}{\grandR} & ensembles.tex & symbole de l'ensemble des réels & $\grandR$ \\ \\
+	\mintinline{latex}{\tendset}               & convergence.tex   & tend vers dans un ensemble                                                    & $u_n \tendset{n}{+\infty}{\mathcal F} \ell$ \\ \\
+
+	\midrule
+
+	\mintinline{latex}{\intervaleint}          & ensembles.tex     & intervalle entier                                                             & $\intervaleint{p}{q}$                       \\ \\
+
+	\mintinline{latex}{\R}                     & ensembles.tex     & espace $\mathds R^p$                                                          & $\R{p}$                                     \\ \\
+
+	\mintinline{latex}{\classespace}           & ensembles.tex     & espace des fonctions de classe $k$ sur un ensemble $E$                        & $\classespace{k}{E}$                        \\ \\
+
+	\mintinline{latex}{\continuborne}          & ensembles.tex     & espace des fonctions continues et bornées sur un ensemble $E$ dans $F$        & $\continuborne{E}{F}$                       \\ \\
+
+	\mintinline{latex}{\continusupportcompact} &                   & espace des fonctions continues à support compact sur un ensemble $E$ dans $F$ & $\continusupportcompact{E}{F}$              \\ \\
+\end{tabularx}
 
 
-H / T / J / W / F / X / Y / F / I / E / M / B / N / Z / Q / C / K  & & autres lettres disponibles \\ \\
+\noindent\begin{tabularx}{\linewidth}{XXXX}
+	\mintinline{latex}{\mesurable}                                                                      & ensembles.tex & espace des fonctions mesurables sur un ensemble $E$ dans $F$               & $\mesurable{E}{F}$                            \\ \\
 
-\mintinline{latex}{\calR} & ensembles.tex & symbole de l'ensemble des entiers naturels & $\calR$ \\ \\
+	\mintinline{latex}{\etageepositive}                                                                 & ensembles.tex & espace des fonctions etagées positives sur un ensemble $E$ dans $F$        & $\etageepositive{E}{F}$                       \\ \\
 
-F / O / L / P / M / N / A / B / C / D / E / F / G / H / I / J / K / Q & & autres lettres disponibles \\ \\
+	\mintinline{latex}{\VA}                                                                             & ensembles.tex & espace des variables aléatoires à valeur dans $E$                          & $\VA{E}$                                      \\ \\
 
-\mintinline{latex}{\Rplus} / \mintinline{latex}{\Rmoins} & ensembles.tex & symbole de l'ensemble des réels positifs / négatifs & $\Rplus$ / $\Rmoins$ \\ \\
+	\mintinline{latex}{\matrixspace}                                                                    & ensembles.tex & espace des matrices carrées de taille $p \times p$ à coefficients dans $E$ & $\matrixspace{p}{E}$                          \\ \\
 
-\mintinline{latex}{\Rplusetoile} / \mintinline{latex}{\Rmoinsetoile} / \mintinline{latex}{\Retoile} & ensembles.tex & symbole de l'ensemble des réels positifs / négatifs non nuls & $\Rplusetoile$ / $\Rmoinsetoile$ / $\Retoile$ \\ \\
+	\mintinline{latex}{\orthonormal}                                                                    & ensembles.tex & symbole orthonormal                                                        & $\orthonormal$                                \\ \\
 
+	\mintinline{latex}{\orthonormalselon}                                                               & ensembles.tex & symbole orthonormal selon un produit scalaire                              & $\orthonormalselon{\mathds L^2}$              \\ \\
+
+	\midrule
+
+	\mintinline{latex}{\grandR}                                                                         & ensembles.tex & symbole de l'ensemble des réels                                            & $\grandR$                                     \\ \\
+
+
+	H / T / J / W / F / X / Y / F / I / E / M / B / N / Z / Q / C / K                                   &               & autres lettres disponibles                                                                                                 \\ \\
+
+	\mintinline{latex}{\calR}                                                                           & ensembles.tex & symbole de l'ensemble des entiers naturels                                 & $\calR$                                       \\ \\
+
+	F / O / L / P / M / N / A / B / C / D / E / F / G / H / I / J / K / Q                               &               & autres lettres disponibles                                                                                                 \\ \\
+
+	\mintinline{latex}{\Rplus} / \mintinline{latex}{\Rmoins}                                            & ensembles.tex & symbole de l'ensemble des réels positifs / négatifs                        & $\Rplus$ / $\Rmoins$                          \\ \\
+
+	\mintinline{latex}{\Rplusetoile} / \mintinline{latex}{\Rmoinsetoile} / \mintinline{latex}{\Retoile} & ensembles.tex & symbole de l'ensemble des réels positifs / négatifs non nuls               & $\Rplusetoile$ / $\Rmoinsetoile$ / $\Retoile$ \\ \\
 \end{tabularx}
 % \pagebreak
 
 \noindent\begin{tabularx}{\linewidth}{XXXX}
-	\textbf{Command} & \textbf{location} & \textbf{short desc.} & \textbf{Example} \\
+	\textbf{Command}                     & \textbf{location}                                               & \textbf{short desc.}                            & \textbf{Example}               \\
 	\midrule
 	% ————————————————————————————————————————————————————————————
-	\mintinline{latex}{\indicatrice} & \detokenize{fonctions_et_}
+	\mintinline{latex}{\indicatrice}     & \detokenize{fonctions_et_}\linebreak\detokenize{operateurs.tex} & indicatrice d'un ensemble                       & $\indicatrice{A}$              \\ \\
 
-operateurs.tex & indicatrice d'un ensemble & $\indicatrice{A}$ \\ \\
+	\mintinline{latex}{\norme}           & \detokenize{fonctions_et_}\linebreak\detokenize{operateurs.tex} & norme d'un élément                              & $\norme{p}{x}$                 \\ \\
 
-	\mintinline{latex}{\norme} & \detokenize{fonctions_et_}
+	\mintinline{latex}{\dist}            & \detokenize{fonctions_et_}\linebreak\detokenize{operateurs.tex} & distance issue d'une norme entre deux vecteurs  & $\dist{x}{y}$                  \\ \\
 
-operateurs.tex & norme d'un élément & $\norme{p}{x}$ \\ \\
+	\mintinline{latex}{\distnorme}       & \detokenize{fonctions_et_}\linebreak\detokenize{operateurs.tex} & distance issue d'une norme entre deux vecteurs  & $\distnorme{\infty}{x}{y}$     \\ \\
 
-	\mintinline{latex}{\dist} & \detokenize{fonctions_et_}
+	\mintinline{latex}{\prodscal}        & \detokenize{fonctions_et_}\linebreak\detokenize{operateurs.tex} & produit scalaire entre deux vecteurs            & $\prodscal{x}{y}$              \\ \\
 
-operateurs.tex & distance issue d'une norme entre deux vecteurs & $\dist{x}{y}$ \\ \\
-
-	\mintinline{latex}{\distnorme} & \detokenize{fonctions_et_}
-
-operateurs.tex & distance issue d'une norme entre deux vecteurs & $\distnorme{\infty}{x}{y}$ \\ \\
-
-	\mintinline{latex}{\prodscal} & \detokenize{fonctions_et_}
-
-operateurs.tex & produit scalaire entre deux vecteurs & $\prodscal{x}{y}$ \\ \\
-
-	\mintinline{latex}{\prodscalselon} & \detokenize{fonctions_et_}
-
-operateurs.tex & produit scalaire [spécifié] entre deux vecteurs & $\prodscalselon{x}{y}{\infty}$ \\ \\
+	\mintinline{latex}{\prodscalselon}   & \detokenize{fonctions_et_}\linebreak\detokenize{operateurs.tex} & produit scalaire [spécifié] entre deux vecteurs & $\prodscalselon{x}{y}{\infty}$ \\ \\
 
 	\mintinline{latex}{\argmax(\limits)} & \detokenize{fonctions_et_}
 
-	operateurs.tex & argmax & $\argmax\limits_{x \in E} f(x)$ \\ \\
+	operateurs.tex                       & argmax                                                          & $\argmax\limits_{x \in E} f(x)$                                                  \\ \\
 
 	\mintinline{latex}{\argmin(\limits)} & \detokenize{fonctions_et_}
 
-	operateurs.tex & argmin & $\argmin\limits_{x \in E} f(x)$ \\ \\
+	operateurs.tex                       & argmin                                                          & $\argmin\limits_{x \in E} f(x)$                                                  \\ \\
 
-	\mintinline{latex}{\inverse} & \detokenize{fonctions_et_}
+	\mintinline{latex}{\inverse}         & \detokenize{fonctions_et_}
 
-	operateurs.tex & inverse d'un élément & $\inverse{A}$ \\ \\
+	operateurs.tex                       & inverse d'un élément                                            & $\inverse{A}$                                                                    \\ \\
 
-	\mintinline{latex}{\isdef} & \detokenize{fonctions_et_}
+	\mintinline{latex}{\isdef}           & \detokenize{fonctions_et_}
 
-	operateurs.tex & est défini comme & $A \isdef B$ \\ \\
+	operateurs.tex                       & est défini comme                                                & $A \isdef B$                                                                     \\ \\
 
-	\mintinline{latex}{\comm} & \detokenize{fonctions_et_}
+	\mintinline{latex}{\comm}            & \detokenize{fonctions_et_}
 
-	operateurs.tex & commutant d'un ensemble d'opérateurs & $\comm{A}$ \\ \\
+	operateurs.tex                       & commutant d'un ensemble d'opérateurs                            & $\comm{A}$                                                                       \\ \\
 
-	\mintinline{latex}{\rg} & \detokenize{fonctions_et_}
+	\mintinline{latex}{\rg}              & \detokenize{fonctions_et_}
 
-	operateurs.tex & rang d'un élément & $\rg{A}$ \\ \\
+	operateurs.tex                       & rang d'un élément                                               & $\rg{A}$                                                                         \\ \\
 
-	\mintinline{latex}{\im} & \detokenize{fonctions_et_}
+	\mintinline{latex}{\im}              & \detokenize{fonctions_et_}
 
-	operateurs.tex & image d'un élément & $\im{A}$ \\ \\
+	operateurs.tex                       & image d'un élément                                              & $\im{A}$                                                                         \\ \\
 
-	\mintinline{latex}{\pgcd} & \detokenize{fonctions_et_}
+	\mintinline{latex}{\pgcd}            & \detokenize{fonctions_et_}
 
-	operateurs.tex & pgcd & $\pgcd{p}{q}$ \\ \\
+	operateurs.tex                       & pgcd                                                            & $\pgcd{p}{q}$                                                                    \\ \\
 
-	\mintinline{latex}{\positive} & \detokenize{fonctions_et_}
+	\mintinline{latex}{\positive}        & \detokenize{fonctions_et_}
 
-	operateurs.tex & partie positive d'un élément & $\positive{x^3 - x^2}$ \\ \\
+	operateurs.tex                       & partie positive d'un élément                                    & $\positive{x^3 - x^2}$                                                           \\ \\
 \end{tabularx}
 
 \noindent\begin{tabularx}{\linewidth}{XXXX}
-	\mintinline{latex}{\func} & \detokenize{fonctions_et_}
+	\hyperref[code:func]{\mintinline{latex}{\func}}             & \detokenize{fonctions_et_}\linebreak\detokenize{operateurs.tex} & définition d'une fonction                            & $f: \func{E}{F}{x}{f(x)}$   \\\\
 
-	operateurs.tex & définition d'une fonction & $f: \func{E}{F}{x}{f(x)}$ \\\\
+	\midrule                                                                                                                                                                                     \\
 
-	\midrule
+	\mintinline{latex}{\petitop}          & \detokenize{limites.tex}                                        & petit o en probabilité                               & $\petitop{n^{- \frac 1 5}}$ \\ \\
 
-	\mintinline{latex}{\petitop} & \detokenize{limites.tex} & petit o en probabilité & $\petitop{n^{- \frac 1 5}}$ \\ \\
+	\mintinline{latex}{\grandop}          & \detokenize{limites.tex}                                        & grand O en probabilité                               & $\grandop{n^{- \frac 1 5}}$ \\ \\
 
-	\mintinline{latex}{\grandop} & \detokenize{limites.tex} & grand O en probabilité & $\grandop{n^{- \frac 1 5}}$ \\ \\
+	\midrule                                                                                                                                                                                     \\
 
-	\midrule
-
-	% TODO : preuve.tex
-	% TODO : proba_lettres.tex
-	% TODO : proba.tex
-	% TODO : property.tex
-	% TODO : suites.tex
+	\mintinline{latex}{\statrang}         & \detokenize{suites.tex}                                         & $k^e$ valeur ordonnée (ordre croissant)              & $\statrang Y n k$           \\ \\
+	\mintinline{latex}{\suiteensemble}    & \detokenize{suites.tex}                                         & suite à valeur dans $E$                              & $\suiteensemble E$          \\ \\
+	\mintinline{latex}{\suite}            & \detokenize{suites.tex}                                         & suite \og u n \fg                                    & $\suite u n$                \\ \\
+	\mintinline{latex}{\soussuite}        & \detokenize{suites.tex}                                         & sous suite indexée par $k$                           & $\soussuite u k$            \\ \\
+	\mintinline{latex}{\famille}          & \detokenize{suites.tex}                                         & famille d'objets indexée sur un ensemble $I$         & $\famille {\mathds X}{i}$   \\ \\
+	\mintinline{latex}{\suitecomposition} & \detokenize{suites.tex}                                         & suite d'images d'une suite $x_k$ par la fonction $f$ & $\suitecomposition f x k$   \\ \\
+	% TODO : trouver à quoi ça correspond (stat maths)
+	\mintinline{latex}{\suitestatrang}    & \detokenize{suites.tex}                                         & ???                                                  & $\suitestatrang X \eta k$   \\ \\
+	\mintinline{latex}{\famfinie}         & \detokenize{suites.tex}                                         & ensemble fini d'éléments de $[\cdot]$ à $[\cdot]$    & $\famfinie x 1 n$           \\ \\
+	\mintinline{latex}{\fromto}           & \detokenize{suites.tex}                                         & de $[\cdot]$ à $[\cdot]$                             & $\fromto X 1 p$             \\ \\
+	\mintinline{latex}{\ordered}          & \detokenize{suites.tex}                                         & élément ordonné (ici $k^e$)                          & $\ordered X k$              \\ \\
+	\bottomrule
 \end{tabularx}
 
 \pagebreak
 \noindent\begin{tabularx}{\linewidth}{X}
 	\toprule
-	\textbf{definition/custom\_colors.tex} \\
+	\textbf{definition/custom\_colors.tex}                                                              \\
 	\midrule
-	\textbf{Description} \\
-	Custom colors that can be used in other commands such as \mintinline{latex}{\colorize[color]{text}}\\
+	\textbf{Description}                                                                                \\
+	Custom colors that can be used in other commands such as \mintinline{latex}{\colorize[color]{text}} \\
 	\midrule
 \end{tabularx}
 \noindent\begin{tabularx}{\linewidth}{XX}
-	\textbf{color name} & \textbf{color} \\
+	\textbf{color name}                    & \textbf{color}                                            \\
 	\midrule
-	\detokenize{flatuicolors_orange} & \colorbox{flatuicolors_orange}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_orange}       & \colorbox{flatuicolors_orange}{ \, \, \, \, \, \, }       \\ \\
 
 	\detokenize{flatuicolors_orange_light} & \colorbox{flatuicolors_orange_light}{ \, \, \, \, \, \, } \\ \\
 
-	\detokenize{flatuicolors_red_light} & \colorbox{flatuicolors_red_light}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_red_light}    & \colorbox{flatuicolors_red_light}{ \, \, \, \, \, \, }    \\ \\
 
-	\detokenize{flatuicolors_tomato} & \colorbox{flatuicolors_tomato}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_tomato}       & \colorbox{flatuicolors_tomato}{ \, \, \, \, \, \, }       \\ \\
 
-	\detokenize{flatuicolors_yellow} & \colorbox{flatuicolors_yellow}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_yellow}       & \colorbox{flatuicolors_yellow}{ \, \, \, \, \, \, }       \\ \\
 
-	\detokenize{flatuicolors_green} & \colorbox{flatuicolors_green}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_green}        & \colorbox{flatuicolors_green}{ \, \, \, \, \, \, }        \\ \\
 
-	\detokenize{flatuicolors_greenish} & \colorbox{flatuicolors_greenish}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_greenish}     & \colorbox{flatuicolors_greenish}{ \, \, \, \, \, \, }     \\ \\
 
-	\detokenize{flatuicolors_blue} & \colorbox{flatuicolors_blue}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_blue}         & \colorbox{flatuicolors_blue}{ \, \, \, \, \, \, }         \\ \\
 
-	\detokenize{flatuicolors_blue_light} & \colorbox{flatuicolors_blue_light}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_blue_light}   & \colorbox{flatuicolors_blue_light}{ \, \, \, \, \, \, }   \\ \\
 
-	\detokenize{flatuicolors_blue_deep} & \colorbox{flatuicolors_blue_deep}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_blue_deep}    & \colorbox{flatuicolors_blue_deep}{ \, \, \, \, \, \, }    \\ \\
 
-	\detokenize{flatuicolors_blue_devil} & \colorbox{flatuicolors_blue_devil}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_blue_devil}   & \colorbox{flatuicolors_blue_devil}{ \, \, \, \, \, \, }   \\ \\
 
-	\detokenize{flatuicolors_purple} & \colorbox{flatuicolors_purple}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_purple}       & \colorbox{flatuicolors_purple}{ \, \, \, \, \, \, }       \\ \\
 
 	\detokenize{flatuicolors_purple_light} & \colorbox{flatuicolors_purple_light}{ \, \, \, \, \, \, } \\ \\
 
-	\detokenize{flatuicolors_purple_dark} & \colorbox{flatuicolors_purple_dark}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_purple_dark}  & \colorbox{flatuicolors_purple_dark}{ \, \, \, \, \, \, }  \\ \\
 
-	\detokenize{flatuicolors_rose} & \colorbox{flatuicolors_rose}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_rose}         & \colorbox{flatuicolors_rose}{ \, \, \, \, \, \, }         \\ \\
 
-	\detokenize{flatuicolors_biscay} & \colorbox{flatuicolors_biscay}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_biscay}       & \colorbox{flatuicolors_biscay}{ \, \, \, \, \, \, }       \\ \\
 
-	\detokenize{flatuicolors_imperial} & \colorbox{flatuicolors_imperial}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_imperial}     & \colorbox{flatuicolors_imperial}{ \, \, \, \, \, \, }     \\ \\
 
-	\detokenize{flatuicolors_aqua} & \colorbox{flatuicolors_aqua}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_aqua}         & \colorbox{flatuicolors_aqua}{ \, \, \, \, \, \, }         \\ \\
 
-	\detokenize{flatuicolors_magenta} & \colorbox{flatuicolors_magenta}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_magenta}      & \colorbox{flatuicolors_magenta}{ \, \, \, \, \, \, }      \\ \\
 
-	\detokenize{flatuicolors_light_gray} & \colorbox{flatuicolors_light_gray}{ \, \, \, \, \, \, } \\ \\
+	\detokenize{flatuicolors_light_gray}   & \colorbox{flatuicolors_light_gray}{ \, \, \, \, \, \, }   \\ \\
 
 
 	\bottomrule
@@ -391,13 +396,40 @@ operateurs.tex & produit scalaire [spécifié] entre deux vecteurs & $\prodscals
 
 \noindent\begin{tabularx}{\linewidth}{XXXX}
 	\toprule
-	\textbf{Command} & \textbf{Arguments} & \textbf{Code} & \textbf{Render} \\
+	\textbf{Command}                                                                   & \textbf{Arguments}                                                                     & \textbf{Code}                                                                        & \textbf{Render} \\
 	\midrule
-    \mintinline{latex}{\func} & \begin{itemize}
-		\item \mintinline{latex}{{E}}
-		\item \mintinline{latex}{{F}}
-		\item \mintinline{latex}{{x}}
-		\item \mintinline{latex}{{f(x)}}
-	\end{itemize} & \mintinline{latex}{f: \func{E}{F}{x}{f(x)}} & $f: \func{E}{F}{x}{f(x)}$ \\ \\
+	% ~ func ——————————————————————————
+	\mintinline{latex}{\func}\label{code:func}                                         & \begin{enumerate}
+		                                                                                     \item \mintinline{latex}{{E}}
+		                                                                                     \item \mintinline{latex}{{F}}
+		                                                                                     \item \mintinline{latex}{{x}}
+		                                                                                     \item \mintinline{latex}{{f(x)}}
+	                                                                                     \end{enumerate}                       & \mintinline{latex}{f: \func{E}{F}}\linebreak\mintinline{latex}{{x}{f(x)}}            & $f: \func{E}{F}{x}{f(x)}$                                        \\ \\
+	% ~————————————————————————————————
+	\midrule                                                                                                                                                                                                                                                                             \\
+	% ~ samelaw ———————————————————————
+	\hyperref[desc:samelaw]{\mintinline{latex}{\samelaw}}\label{code:samelaw}          & \begin{enumerate}
+		                                                                                     \item \textbf{loi suivie :} \mintinline{latex}{{Z}}
+	                                                                                     \end{enumerate} & \mintinline{latex}{X \samelaw Z}                                                     & $X \samelaw Z$                                                                         \\ \\
+	% ~————————————————————————————————
+	\midrule                                                                                                                                                                                                                                                                             \\
+	% ~ samelaw ———————————————————————
+	\hyperref[desc:probaloi]{\mintinline{latex}{\probaloi}}\label{code:probaloi}       & \begin{enumerate}
+		                                                                                     \item \textbf{loi :} \mintinline{latex}{{X}}
+		                                                                                     \item \textbf{expression :} \mintinline{latex}{{X^2}}
+	                                                                                     \end{enumerate} & \mintinline{latex}{\probaloi{X | Y}}\linebreak\mintinline{latex}{{2X^2 - 7Y < \eta}} & $\probaloi{X | Y}{2X^2 - 7Y < \eta}$                                                   \\ \\
+	% ~————————————————————————————————
+	\midrule                                                                                                                                                                                                                                                                             \\
+	% ~ esploisach ————————————————————
+	\hyperref[desc:esploisach]{\mintinline{latex}{\esploisach}}\label{code:esploisach} & \begin{enumerate}
+		                                                                                     \item \textbf{loi :} \mintinline{latex}{{Z}}
+		                                                                                     \item \textbf{expression :} \mintinline{latex}{{Z \times \log U}}
+		                                                                                     \item \textbf{sachant :} \mintinline{latex}{{U}}
+	                                                                                     \end{enumerate} &
+	\mintinline{latex}{\esploisach{Z}}
+	\mintinline{latex}{{Z \times \log U}}
+	\mintinline{latex}{{U}}
+	                                                                                   & $\esploisach{Z}{ ZU \times \log(\sigma)Z ^2}{U}$                                                                                                                                                \\ \\
 	\bottomrule
 \end{tabularx}
+
