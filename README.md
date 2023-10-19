@@ -91,44 +91,43 @@ If the user prefers in a markdown format : it can be found [here](./doc/doc.md) 
 
 The project `Latex-Template` relies on the following latex packages
 
-| package      | used for                                         | `include/pacakges/` |
-| ------------ | ------------------------------------------------ | ------------------- |
-| inputenc     | utf-8 input                                      |                     |
-| fontenc      |                                                  |                     |
-| graphicx     |                                                  |                     |
-| amsmath      | maths                                            |                     |
-| amssymb      | maths                                            |                     |
-| hyperref     | url links with custom text                       |                     |
-| dsfont       | double stroke : better than `\mathbb`            |                     |
-| babel        | french names for envs                            |                     |
-| url          | ???                                              |                     |
-| pgfplots     | latex curve graphs                               |                     |
-| stmaryrd     | ???                                              |                     |
-| mathtools    | convenient convergence arrows                    |                     |
-| —            | —                                                | —                   |
-| avant        | font                                             |                     |
-| fontawesome5 | icons [`\info` / `\warn` ...]                    |                     |
-| mfirstuc     | ???                                              |                     |
-| float        | ???                                              |                     |
-| multirow     | ???                                              |                     |
-| awesomebox   | env with bar at the left [`\info` / `\warn` ...] |                     |
-| minitoc      | table of content of the chapter                  |                     |
-| minted       | code highlight                                   |                     |
-| table        | tables                                           |                     |
-| xcdraw       | ???                                              |                     |
-| xcolor       | custom colors                                    |                     |
-| array        | ???                                              |                     |
-| booktabs     | ???                                              |                     |
-| tabularx     | beautiful tables                                 |                     |
-| algorithm2e  | algorithm environments                           |                     |
-| footmisc     | ???                                              |                     |
-| comment      | comment large blocks of code with env            |                     |
-| tikz         |                                                  |                     |
-| tikz-cd      |                                                  |                     |
-| framed       | ???                                              |                     |
-| multicol     | two-column documents                             |                     |
-| changepage   | ???                                              |                     |
-
+| package      | used for                                             | `include/pacakges/` |
+| ------------ | ---------------------------------------------------- | ------------------- |
+| inputenc     | utf-8 input                                          |                     |
+| fontenc      | font encoding                                        |                     |
+| graphicx     | including images                                     |                     |
+| amsmath      | maths                                                |                     |
+| amssymb      | maths                                                |                     |
+| hyperref     | url links with custom text                           |                     |
+| dsfont       | double stroke : better than `\mathbb`                |                     |
+| babel        | french names for envs                                |                     |
+| url          | typesetting URLs                                     |                     |
+| pgfplots     | latex curve graphs                                   |                     |
+| stmaryrd     | symbols for computer science                         |                     |
+| mathtools    | convenient convergence arrows                        |                     |
+| —            | —                                                    | —                   |
+| avant        | font                                                 |                     |
+| fontawesome5 | icons [`\info` / `\warn` ...]                        |                     |
+| mfirstuc     | capitalizing the first letter of a word              |                     |
+| float        | improved interface for floating objects              |                     |
+| multirow     | table cells spanning multiple rows                   |                     |
+| awesomebox   | env with bar at the left [`\info` / `\warn` ...]     |                     |
+| minitoc      | table of content of the chapter                      |                     |
+| minted       | code highlight                                       |                     |
+| table        | tables                                               |                     |
+| xcdraw       | drawing tables with TikZ                             |                     |
+| xcolor       | custom colors                                        |                     |
+| array        | extending the array and tabular environments         |                     |
+| booktabs     | publication quality tables                           |                     |
+| tabularx     | beautiful tables with adjustable-width column        |                     |
+| algorithm2e  | algorithm environments                               |                     |
+| footmisc     | make sure footnotes are bellow                       |                     |
+| comment      | commenting out large blocks of code with env         |                     |
+| tikz         | creating graphics programmatically                   |                     |
+| tikz-cd      | creating commutative diagrams                        |                     |
+| framed       | framed or shaded regions that can break across pages |                     |
+| multicol     | typesetting documents with multiple columns          |                     |
+| changepage   | margin adjustment and detection of odd/even pages    |                     |
 ---
 
 ```zsh
