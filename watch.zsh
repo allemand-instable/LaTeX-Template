@@ -22,4 +22,14 @@ for item in "${content_list_trimmed[@]}"; do
 done
 
 
-latexmk -pdf -time -silent -pvc -bibtex "src/rapport.tex"
+if [[ $1 == "-d" ]]; then
+    latexmk -pdf -time -silent -pvc -bibtex "src/documentation.tex"
+elif [[ $1 == "-t" ]]; then
+    latexmk -pdf -time -silent -pvc -bibtex "src/tests.tex"
+elif [[ $1 == "-h" ]]; then
+    echo "▶ Documentation : -d"
+    echo "▶ Rapport : -r / nothing"
+    echo "▶ Tests : -t"
+else
+    latexmk -pdf -time -silent -pvc -bibtex "src/rapport.tex"
+fi

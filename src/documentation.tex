@@ -11,6 +11,11 @@
 \input{include/global_commands.tex}
 
 \begin{document}
+
+	\tableofcontents
+
+	\chapter{Documentation}
+	
 	% 🧠 why ?
 	% si l environnement minted n est pas appelé au moins une fois (executé), alors minted ne génère pas le fichier aux de style .pygstyle nécesaaire pour les inlines
 	\begin{phantom}
@@ -18,10 +23,74 @@
 		\end{minted}
 	\end{phantom}
 
-	\chapter{Documentation}
-
-
 	\section{Packages \& Dependencies}
+
+	\noindent\begin{tabularx}{\linewidth}{|X|X|}
+		\hline
+		\textbf{Package}        & \textbf{Description}                                                                                                   \\
+		\hline
+		\verb|inputenc|         & Allows the user to input accented characters directly from the keyboard, without having to use special commands.       \\
+		\hline
+		\verb|fontenc|          & Allows the user to select font encodings.                                                                              \\
+		\hline
+		\verb|graphicx|         & Provides a key-value interface for optional arguments to the \verb|\includegraphics| command.                          \\
+		\hline
+		\verb|amsmath, amssymb| & Provides various mathematical symbols and environments.                                                                \\
+		\hline
+		\verb|hyperref|         & Provides extensive support for hypertext in LaTeX.                                                                     \\
+		\hline
+		\verb|babel|            & Provides internationalization for LaTeX.                                                                               \\
+		\hline
+		\verb|url|              & Provides commands for typesetting URLs.                                                                                \\
+		\hline
+		\verb|xcolor|           & Provides easy driver-independent access to several kinds of color tints, shades, tones, and mixes of arbitrary colors. \\
+		\hline
+		\verb|array|            & Provides an extended implementation of the array and tabular environments.                                             \\
+		\hline
+		\verb|booktabs|         & Provides commands to enhance the quality of tables.                                                                    \\
+		\hline
+		\verb|tabularx|         & Provides an environment for tables that automatically adjusts the width of columns to achieve a specified total width. \\
+		\hline
+		\verb|pgfplots|         & Provides tools to generate plots and diagrams.                                                                         \\
+		\hline
+		\verb|stmaryrd|         & Provides various symbols for mathematical logic.                                                                       \\
+		\hline
+		\verb|mathtools|        & Provides various tools to enhance the appearance and functionality of mathematical formulas.                           \\
+		\hline
+		\verb|algorithm2e|      & Provides an environment for writing algorithms in LaTeX.                                                               \\
+	\end{tabularx}
+
+	\noindent\begin{tabularx}{\linewidth}{|X|X|}
+		% \hline
+		\verb|footmisc|         & Provides several options for customizing footnotes.                                                                    \\
+		\hline
+		\verb|comment|          & Provides an environment for commenting out sections of text.                                                           \\
+		\hline
+		\verb|mfirstuc|         & Provides commands for capitalizing the first letter of a word.                                                         \\
+		\hline
+		\verb|float|            & Provides improved interface for floating objects such as figures and tables.                                           \\
+		\hline
+		\verb|multirow|         & Provides commands for multi-row cells in tables.                                                                       \\
+		\hline
+		\verb|geometry|         & Provides an easy and flexible interface to customize page layout.                                                      \\
+		\hline
+		\verb|tikz|             & Provides a powerful tool to create graphics in LaTeX.                                                                  \\
+		\hline
+		\verb|tikz-cd|          & Provides a specialized tool for creating commutative diagrams.                                                         \\
+		\hline
+		\verb|framed|           & Provides an environment for creating framed boxes.                                                                     \\
+		\hline
+		\verb|multicol|         & Provides an environment for multicolumn typesetting.                                                                   \\
+		\hline
+		\verb|awesomebox|       & Provides various types of colored boxes.                                                                               \\
+		\hline
+		\verb|changepage|       & Provides commands to change the page layout in the middle of a document.                                               \\
+		\hline
+	\end{tabularx}
+
+	\info{
+		\smallskip\centering The descriptions have been made using GPT (because it's boring and long), some of the descriptions might not be fully accurate
+	}
 
 	\section{Commands}
 
@@ -142,7 +211,7 @@
 	\noindent\begin{tabularx}{\linewidth}{XXXX}
 		\textbf{Command}                                                                   & \textbf{location}              & \textbf{short desc.}                               & \textbf{Example}                                 \\
 		\midrule
-		\mintinline{latex}{\P}                                                             & \detokenize{proba_lettres.tex} & Probabilité                                        & $:\P$                                            \\ \\
+		\mintinline{latex}{\P}                                                             & \detokenize{proba_lettres.tex} & Probabilité                                        & $\P$                                            \\ \\
 		\mintinline{latex}{\E}                                                             & \detokenize{proba_lettres.tex} & Espérance                                          & $\E$                                             \\ \\
 		\mintinline{latex}{\V}                                                             & \detokenize{proba_lettres.tex} & Variance                                           & $\V$                                             \\ \\
 		\mintinline{latex}{\Q}                                                             & \detokenize{proba_lettres.tex} & Rationels                                          & $\Q$                                             \\ \\
@@ -305,6 +374,38 @@
 		\mintinline{latex}{\famfinie}                   & \detokenize{suites.tex}                                         & ensemble fini d'éléments de $[\cdot]$ à $[\cdot]$    & $\famfinie x 1 n$           \\ \\
 		\mintinline{latex}{\fromto}                     & \detokenize{suites.tex}                                         & de $[\cdot]$ à $[\cdot]$                             & $\fromto X 1 p$             \\ \\
 		\mintinline{latex}{\ordered}                    & \detokenize{suites.tex}                                         & élément ordonné (ici $k^e$)                          & $\ordered X k$              \\ \\
+		\bottomrule
+	\end{tabularx}
+	
+
+	\noindent\begin{tabularx}{\linewidth}{XXXX}
+		\toprule                                                                                            \\
+		% Lebesgue
+		\mintinline{latex}{\leb} & \detokenize{integral.tex} & Intégrale de Lebesgue (symbol différenciel) & $\leb$ \\ \\
+		\mintinline{latex}{\lebesgue} & \detokenize{integral.tex} & Intégrale de Lebesgue $\oplus$ ensemble   & $\lebesgue {\mathds X}$ \\ \\
+		\mintinline{latex}{\lebint} & \detokenize{integral.tex} & Intégrale de Lebesgue $\oplus$ de $a$ à $b$  & $\lebint a b$ \\ \\
+		\mintinline{latex}{\lebm} & \detokenize{integral.tex} & Intégrale de Lebesgue (ensemble $\oplus$ intégrande $\oplus$ mesure )  & $\lebm {\mathds X} f \mu$ \\ \\
+		% Bochner
+		\midrule
+		\mintinline{latex}{\boch} & \detokenize{integral.tex} & Intégrale de Bochner (symbol différenciel) & $\boch$ \\ \\
+		\mintinline{latex}{\bochner} & \detokenize{integral.tex} & Intégrale de Bochner $\oplus$ ensemble   & $\bochner {\mathds X}$ \\ \\
+		\mintinline{latex}{\bochint} & \detokenize{integral.tex} & Intégrale de Bochner $\oplus$ de $a$ à $b$  & $\bochint a b$ \\ \\
+		\mintinline{latex}{\bochm} & \detokenize{integral.tex} & Intégrale de Bochner (ensemble $\oplus$ intégrande $\oplus$ mesure )  & $\bochm {\mathds X} f \mu$ \\ \\
+		\midrule
+	\end{tabularx}
+	\noindent\begin{tabularx}{\linewidth}{XXXX}
+		\midrule \\
+		% Riemann
+		\mintinline{latex}{\riem} & \detokenize{integral.tex} & Intégrale de Riemann (symbol différenciel) & $\riem$ \\ \\
+		\mintinline{latex}{\riemann} & \detokenize{integral.tex} & Intégrale de Riemann $\oplus$ ensemble   & $\riemann {\mathds X}$ \\ \\
+		\mintinline{latex}{\riemint} & \detokenize{integral.tex} & Intégrale de Riemann $\oplus$ de $a$ à $b$  & $\riemint a b$ \\ \\
+		\mintinline{latex}{\riemm} & \detokenize{integral.tex} & Intégrale de Riemann (ensemble $\oplus$ intégrande $\oplus$ mesure )  & $\riemm {\mathds X} f \mu$ \\ \\
+		% Pettis
+		\midrule
+		\mintinline{latex}{\pet} & \detokenize{integral.tex} & Intégrale de Pettis (symbol différenciel) & $\pet$ \\ \\
+		\mintinline{latex}{\pettis} & \detokenize{integral.tex} & Intégrale de Pettis $\oplus$ ensemble   & $\pettis {\mathds X}$ \\ \\
+		\mintinline{latex}{\petint} & \detokenize{integral.tex} & Intégrale de Pettis $\oplus$ de $a$ à $b$  & $\petint a b$ \\ \\
+		\mintinline{latex}{\petm} & \detokenize{integral.tex} & Intégrale de Pettis (ensemble $\oplus$ intégrande $\oplus$ mesure )  & $\petm {\mathds X} f \mu$ \\ \\
 		\bottomrule
 	\end{tabularx}
 
