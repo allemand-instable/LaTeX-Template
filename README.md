@@ -2,6 +2,17 @@
 
 A simple LaTeX Template, with nice structure, and commands for ease of use
 
+## Requirements / Dependencies
+
+| software           | what for ?                                                        | installation link                                                        |
+| ------------------ | ----------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| latexmk            | compile with complex options and watch for changes                | [official doc](https://mg.readthedocs.io/latexmk.html)                   |
+| zsh [for now]      | shell targeted for the scripts "compile", "clear_aux" and "watch" | [oh-my-zsh tuto](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) |
+| latex              | seems obvious                                                     | [official doc](https://www.latex-project.org/get/)                       |
+| [linux] evince     | pdf viewer                                                        |                                                                          |
+| [macos] skim       | pdf viewer                                                        | [official website](https://skim-app.sourceforge.io/)                     |
+| [windows] gsview32 | pdf viewer                                                        |                                                                          |
+
 ## compiling and watching using `latexmk` :
 
 ➤ efficient way to compile and watch for changes in your LaTeX files
@@ -60,6 +71,7 @@ If the user prefers in a markdown format : it can be found [here](./doc/doc.md) 
 ```
 
 ## Packages (todo):
+
  <!-- TODO -->
 
 The project `Latex-Template` relies on the following latex packages
@@ -101,7 +113,6 @@ The project `Latex-Template` relies on the following latex packages
 | framed       | ???                                              |                     |
 | multicol     | two-column documents                             |                     |
 | changepage   | ???                                              |                     |
-
 
 ---
 
