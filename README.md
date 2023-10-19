@@ -27,6 +27,21 @@ zsh compile.zsh
 zsh watch.zsh
 ```
 
+### flags
+
+```zsh
+zsh compile.zsh -d      # compiles documentation only
+zsh compile.zsh -r      # compiles report only
+zsh compile.zsh -t      # compiles tests only
+zsh compile.zsh -h      # flags help
+# —— Exclusive to compile ———
+zsh compile.zsh         # compile all files (doc/report/test)
+```
+
+The same applies to watch script
+
+### other shells
+
 if you use another shell (bash/...) you might have to adapt the script [chatGPT if you are hurry] to the targeted shell.
 
 ## project strcuture
