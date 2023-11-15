@@ -4,6 +4,7 @@
 % ✏️ note : include should be used in document environment → use of input here
 \input{include/include.tex}
 \input{settings.tex}
+
 % ⚠️ ————————————————————————
 
 % * global commands
@@ -12,17 +13,14 @@
 
 \begin{document}
 
-	\tableofcontents
-
+	% \tableofcontents
 	\chapter{Documentation}
-	
 	% 🧠 why ?
 	% si l environnement minted n est pas appelé au moins une fois (executé), alors minted ne génère pas le fichier aux de style .pygstyle nécesaaire pour les inlines
 	\begin{phantom}
 		\begin{minted}{latex}
 		\end{minted}
 	\end{phantom}
-
 	\section{Packages \& Dependencies}
 
 	\noindent\begin{tabularx}{\linewidth}{|X|X|}
@@ -104,13 +102,13 @@
 		\textbf{commands/editor}                                                                                                                                    \\
 		\midrule
 
-		\mintinline{latex}{\citationrequise} & \colorize{main.tex} & Avertissement pour l'éditeur : une citation est à insérer ici      & \citationrequise          \\ \\
+		\mintinline{latex}{\citationrequise} & \tcolorize{main.tex} & Avertissement pour l'éditeur : une citation est à insérer ici      & \citationrequise          \\ \\
 
-		\mintinline{latex}{\exemplerequis}   & \colorize{main.tex} & Avertissement pour l'éditeur : un exemple est à insérer ici        & \exemplerequis            \\ \\
+		\mintinline{latex}{\exemplerequis}   & \tcolorize{main.tex} & Avertissement pour l'éditeur : un exemple est à insérer ici        & \exemplerequis            \\ \\
 
-		\mintinline{latex}{\editorwarn}      & \colorize{main.tex} & Avertissement pour l'éditeur                                       & \editorwarn{texte custom} \\ \\
+		\mintinline{latex}{\editorwarn}      & \tcolorize{main.tex} & Avertissement pour l'éditeur                                       & \editorwarn{texte custom} \\ \\
 
-		\mintinline{latex}{\editlater}       & \colorize{main.tex} & Avertissement pour l'éditeur : une modification est à apporter ici & \editlater{texte custom}  \\ \\
+		\mintinline{latex}{\editlater}       & \tcolorize{main.tex} & Avertissement pour l'éditeur : une modification est à apporter ici & \editlater{texte custom}  \\ \\
 		\bottomrule
 		% ————————————————————————————————————————————————————————————
 	\end{tabularx}
@@ -129,29 +127,29 @@
 		\textbf{Command}              & \textbf{location}         & \textbf{color}                                                                                     & \textbf{symbol}                                                                \\
 		\midrule
 
-		\mintinline{latex}{\info}     & \colorize{awesomebox.tex} & \colorize[flatuicolors_blue]{\detokenize{flatuicolors_blue}}                                       & \smallskip\textbf{symbol :} \colorize[flatuicolors_blue]{\faInfoCircle}        \\ \\
+		\mintinline{latex}{\info}     & \tcolorize{awesomebox.tex} & \tcolorize[flatuicolors_blue]{\detokenize{flatuicolors_blue}}                                       & \smallskip\textbf{symbol :} \tcolorize[flatuicolors_blue]{\faInfoCircle}        \\ \\
 
-		\mintinline{latex}{\chk}      & \colorize{awesomebox.tex} & \colorize[flatuicolors_green]{\detokenize{flatuicolors_green}}                                     & \textbf{symbol :} \colorize[flatuicolors_green]{\faCheckCircle}                \\ \\
+		\mintinline{latex}{\chk}      & \tcolorize{awesomebox.tex} & \tcolorize[flatuicolors_green]{\detokenize{flatuicolors_green}}                                     & \textbf{symbol :} \tcolorize[flatuicolors_green]{\faCheckCircle}                \\ \\
 
-		\mintinline{latex}{\brain}    & \colorize{awesomebox.tex} & \colorize[flatuicolors_purple_light]{\detokenize{flatuicolors_purple_}\linebreak\smallskip light}  & \textbf{symbol :} \colorize[flatuicolors_purple_light]{\faBrain}               \\ \\
+		\mintinline{latex}{\brain}    & \tcolorize{awesomebox.tex} & \tcolorize[flatuicolors_purple_light]{\detokenize{flatuicolors_purple_}\linebreak\smallskip light}  & \textbf{symbol :} \tcolorize[flatuicolors_purple_light]{\faBrain}               \\ \\
 
-		\mintinline{latex}{\warn}     & \colorize{awesomebox.tex} & \colorize[flatuicolors_orange_light]{\detokenize{flatuicolors_orange_}\linebreak\smallskip light}  & \textbf{symbol :} \colorize[flatuicolors_orange_light]{\faExclamationTriangle} \\ \\
+		\mintinline{latex}{\warn}     & \tcolorize{awesomebox.tex} & \tcolorize[flatuicolors_orange_light]{\detokenize{flatuicolors_orange_}\linebreak\smallskip light}  & \textbf{symbol :} \tcolorize[flatuicolors_orange_light]{\faExclamationTriangle} \\ \\
 
-		\mintinline{latex}{\nope}     & \colorize{awesomebox.tex} & \colorize[flatuicolors_red_light]{\detokenize{flatuicolors_red_light}}                             & \textbf{symbol :} \colorize[flatuicolors_red_light]{\faTimesCircle}            \\ \\
+		\mintinline{latex}{\nope}     & \tcolorize{awesomebox.tex} & \tcolorize[flatuicolors_red_light]{\detokenize{flatuicolors_red_light}}                             & \textbf{symbol :} \tcolorize[flatuicolors_red_light]{\faTimesCircle}            \\ \\
 
-		\mintinline{latex}{\cogs}     & \colorize{awesomebox.tex} & \colorize[flatuicolors_imperial]{\detokenize{flatuicolors_imperial}}                               & \textbf{symbol :} \colorize[flatuicolors_imperial]{\faCogs}                    \\ \\
+		\mintinline{latex}{\cogs}     & \tcolorize{awesomebox.tex} & \tcolorize[flatuicolors_imperial]{\detokenize{flatuicolors_imperial}}                               & \textbf{symbol :} \tcolorize[flatuicolors_imperial]{\faCogs}                    \\ \\
 
-		\mintinline{latex}{\citer}    & \colorize{awesomebox.tex} & \colorize[flatuicolors_corn_flower]{\detokenize{flatuicolors_corn_}\linebreak\smallskip flower}    & \textbf{symbol :} \colorize[flatuicolors_corn_flower]{\faQuoteRight}           \\ \\
+		\mintinline{latex}{\citer}    & \tcolorize{awesomebox.tex} & \tcolorize[flatuicolors_corn_flower]{\detokenize{flatuicolors_corn_}\linebreak\smallskip flower}    & \textbf{symbol :} \tcolorize[flatuicolors_corn_flower]{\faQuoteRight}           \\ \\
 
-		\mintinline{latex}{\avion}    & \colorize{awesomebox.tex} & \colorize[flatuicolors_purple_dark]{\detokenize{flatuicolors_purple_}\linebreak\smallskip dark}    & \textbf{symbol :} \colorize[flatuicolors_purple_dark]{\faFighterJet}           \\ \\
+		\mintinline{latex}{\avion}    & \tcolorize{awesomebox.tex} & \tcolorize[flatuicolors_purple_dark]{\detokenize{flatuicolors_purple_}\linebreak\smallskip dark}    & \textbf{symbol :} \tcolorize[flatuicolors_purple_dark]{\faFighterJet}           \\ \\
 
-		\mintinline{latex}{\question} & \colorize{awesomebox.tex} & \colorize[flatuicolors_aqua] {\detokenize{flatuicolors_aqua}}                                      & \textbf{symbol :} \colorize[flatuicolors_aqua]{\faQuestionCircle}              \\ \\
+		\mintinline{latex}{\question} & \tcolorize{awesomebox.tex} & \tcolorize[flatuicolors_aqua] {\detokenize{flatuicolors_aqua}}                                      & \textbf{symbol :} \tcolorize[flatuicolors_aqua]{\faQuestionCircle}              \\ \\
 
-		\mintinline{latex}{\idee}     & \colorize{awesomebox.tex} & \colorize[flatuicolors_yellow] {\detokenize{flatuicolors_yellow}}                                  & \textbf{symbol :} \colorize[flatuicolors_yellow]{\faLightbulb}                 \\ \\
+		\mintinline{latex}{\idee}     & \tcolorize{awesomebox.tex} & \tcolorize[flatuicolors_yellow] {\detokenize{flatuicolors_yellow}}                                  & \textbf{symbol :} \tcolorize[flatuicolors_yellow]{\faLightbulb}                 \\ \\
 
-		\mintinline{latex}{\book}     & \colorize{awesomebox.tex} & \colorize[flatuicolors_orange_light] {\detokenize{flatuicolors_orange_}\linebreak\smallskip light} & \textbf{symbol :} \colorize[flatuicolors_orange_light]{\faBook}                \\ \\
+		\mintinline{latex}{\book}     & \tcolorize{awesomebox.tex} & \tcolorize[flatuicolors_orange_light] {\detokenize{flatuicolors_orange_}\linebreak\smallskip light} & \textbf{symbol :} \tcolorize[flatuicolors_orange_light]{\faBook}                \\ \\
 
-		\mintinline{latex}{\flask}    & \colorize{awesomebox.tex} & \colorize[flatuicolors_blue_devil]{\detokenize{flatuicolors_blue_}\linebreak\smallskip devil}      & \textbf{symbol :} \colorize[flatuicolors_blue_devil]{\faFlask}                 \\
+		\mintinline{latex}{\flask}    & \tcolorize{awesomebox.tex} & \tcolorize[flatuicolors_blue_devil]{\detokenize{flatuicolors_blue_}\linebreak\smallskip devil}      & \textbf{symbol :} \tcolorize[flatuicolors_blue_devil]{\faFlask}                 \\
 
 		% ————————————————————————————————————————————————————————————
 		\bottomrule
@@ -169,36 +167,37 @@
 		\midrule
 	\end{tabularx}
 	\noindent\begin{tabularx}{\linewidth}{XXXX}
-		\textbf{Command}                 & \textbf{location} & \textbf{short desc.}       & \textbf{Example}                           \\
+		\textbf{Command}                 & \textbf{location} & \textbf{short desc.}                         & \textbf{Example}                                                                      \\
 		\midrule
 		\\
-		\mintinline{latex}{\blackboxed}  & blackbox.tex      & black rect. box            & \blackboxed{custom text}                   \\ \\
+		\mintinline{latex}{\blackboxed}  & blackbox.tex      & black rect. box                              & \blackboxed{custom text}                                                              \\ \\
 
-		\mintinline{latex}{\greenboxed}  & blackbox.tex      & green rect. box            & \greenboxed{custom text}                   \\ \\
+		\mintinline{latex}{\greenboxed}  & blackbox.tex      & green rect. box                              & \greenboxed{custom text}                                                              \\ \\
 
-		\mintinline{latex}{\blueboxed}   & blackbox.tex      & blue rect. box             & \blueboxed{custom text}                    \\ \\
+		\mintinline{latex}{\blueboxed}   & blackbox.tex      & blue rect. box                               & \blueboxed{custom text}                                                               \\ \\
 
-		\mintinline{latex}{\purpleboxed} & blackbox.tex      & purple rect. box           & \purpleboxed{custom text}                  \\ \\
+		\mintinline{latex}{\purpleboxed} & blackbox.tex      & purple rect. box                             & \purpleboxed{custom text}                                                             \\ \\
 
-		\mintinline{latex}{\orangeboxed} & blackbox.tex      & orange rect. box           & \orangeboxed{custom text}                  \\ \\
+		\mintinline{latex}{\orangeboxed} & blackbox.tex      & orange rect. box                             & \orangeboxed{custom text}                                                             \\ \\
 
-		\mintinline{latex}{\redboxed}    & blackbox.tex      & red rect. box              & \redboxed{custom text}                     \\ \\
+		\mintinline{latex}{\redboxed}    & blackbox.tex      & red rect. box                                & \redboxed{custom text}                                                                \\ \\
 
-		\mintinline{latex}{\aquaboxed}   & blackbox.tex      & aqua rect. box             & \aquaboxed{custom text}                    \\ \\
+		\mintinline{latex}{\aquaboxed}   & blackbox.tex      & aqua rect. box                               & \aquaboxed{custom text}                                                               \\ \\
 
-		\mintinline{latex}{\icon}        & blackbox.tex      & fontawesome icon with text & \icon{Github}{10}{GitHub}                  \\ \\
-
-		\midrule
-
-		\mintinline{latex}{\circled}     & circled.tex       & circled text               & \circled{1}                                \\ \\
+		\mintinline{latex}{\icon}        & blackbox.tex      & fontawesome icon with text                   & \icon{Github}{10}{GitHub}                                                             \\ \\
 
 		\midrule
 
-		\mintinline{latex}{\colorize}    & colorize.tex      & colored text               & \colorize[flatuicolors_green]{custom text} \\ \\
+		\mintinline{latex}{\circled}     & circled.tex       & circled text                                 & \circled{1}                                                                           \\ \\
+
+		\midrule
+
+		\mintinline{latex}{\tcolorize}   & colorize.tex      & colored text                                 & \tcolorize[flatuicolors_green]{custom text}                                           \\ \\
+		\mintinline{latex}{\colorize}    & colorize.tex      & colored math input (within math environment) & $\colorize[flatuicolors_rose]{\lambda \cdot \vec a \in \mathcal H \oplus \mathds T}$ \\ \\
 
 		\bottomrule
 	\end{tabularx}
-	\pagebreak
+\pagebreak
 
 	\noindent\begin{tabularx}{\linewidth}{X}
 		\toprule
@@ -415,7 +414,7 @@
 		\textbf{definition/custom\_colors.tex}                                                              \\
 		\midrule
 		\textbf{Description}                                                                                \\
-		Custom colors that can be used in other commands such as \mintinline{latex}{\colorize[color]{text}} \\
+		Custom colors that can be used in other commands such as \mintinline{latex}{\tcolorize[color]{text}} or within math environments with \mintinline{latex}{\$\colorize[color]{\somemath}\$} \\
 		\midrule
 	\end{tabularx}
 	\noindent\begin{tabularx}{\linewidth}{XX}
