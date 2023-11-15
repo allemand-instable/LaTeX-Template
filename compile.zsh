@@ -46,5 +46,10 @@ elif [[ $1 == "-h" ]]; then
 elif [[ $1 == "-d" ]]; then
     latexmk -pdf -bibtex -pv -time -silent "src/documentation.tex"
 else
+    echo "reminder : available arguments
+    ▶ Documentation : -d
+    ▶ Rapport : -r
+    ▶ Tests : -t
+    ▶ All : no arg"
     latexmk -pdf -bibtex -pv -time
 fi
