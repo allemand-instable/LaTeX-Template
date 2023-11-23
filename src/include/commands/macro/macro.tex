@@ -20,4 +20,30 @@
 % 		\largeskip
 %       du texte plus bas
 \newcommand{\largeskip}{\bigskip\bigskip\bigskip}
+
+% & Name
+%       \dash
+% & Description
+%       — dash for mathematical expressions
+%       ▶ because the — utf8 characters is rendered as "superscript"
+% & Arguments
+%       none
+% & Examples
+%       \begin{equation}
+%           ( x_1 \dash x_k )
+%       \end{equation}
+%
+%       ▶ ( 𝑥₁——xₖ )
+\newcommand{\dash}{\rule[1pt]{0.5cm}{0.02cm}}
+
+% & Name
+% 		\penguin
+% & Description
+% 		penguin font awesome icon
+%       ▶ because the \faQq is 200% unintuitive
+% & Arguments
+% 		none
+% & Examples
+%       \penguin
+%       ▶ 🐧
 \newcommand{\penguin}{\faQq}

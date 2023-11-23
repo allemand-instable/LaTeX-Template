@@ -27,6 +27,9 @@
 \usepackage{enumitem}
 \newlist{todolist}{itemize}{2}
 \setlist[todolist]{label=$\square$}
+\newlist{circledenum}{enumerate}{1}
+\setlist[circledenum]{label=\protect\circled{\arabic*}}
+
 \usepackage{pifont}
 \newcommand{\cmark}{\ding{51}}%
 \newcommand{\xmark}{\ding{55}}%
