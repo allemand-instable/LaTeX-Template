@@ -5,7 +5,7 @@
 \usepackage{tikz-cd}
 
 %%%%%%% left bars
-%% https://latex.org/forum/viewtopic.php?t=5580
+% 🌐 https://latex.org/forum/viewtopic.php?t=5580
 \usepackage{framed}
 
 % Multi column
@@ -22,11 +22,11 @@
 \usepackage{changepage}
 % \usepackage{doc}
 
-% > TO-DO LIST environment
+% $ TO-DO LIST environment
 % https://tex.stackexchange.com/questions/247681/how-to-create-checkbox-todo-list
 \usepackage{enumitem}
-\newlist{todolist}{itemize}{2}
-\setlist[todolist]{label=$\square$}
+\newlist{checkmarks}{itemize}{2}
+\setlist[checkmarks]{label=$\square$}
 \newlist{circledenum}{enumerate}{1}
 \setlist[circledenum]{label=\protect\circled{\arabic*}}
 
@@ -36,3 +36,8 @@
 \newcommand{\checked}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
 	\hspace{-2.5pt}}
 \newcommand{\crossed}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+
+% $ INSERT PDF documents
+
+\usepackage{pdfpages}
