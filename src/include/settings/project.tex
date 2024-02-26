@@ -1,19 +1,29 @@
 % ? dependencies
-%       ▶ hyperref
+%       ▶ mail, github, githubissues ⇢ hyperref
 %       ▶ FRENCHtoday ⇢ datetime
 % ~ Project Variables
 % ✅ only text
+% $ Author
 \newcommand{\auteur}{Allemand Instable}
 \newcommand{\authormail}{redacted@gmail.com}
 \newcommand{\authorgithub}{allemand-instable}
-\newcommand{\articletitle}{TITLE}
-\newcommand{\customdate}{\FRENCHtoday\today}
+
+% $ Entity / School / Company
+\newcommand{\entitytitle}{Latex-Template}
+\newcommand{\logoname}{latex-template}
+
+% $ Project
 \newcommand{\projecttitle}{PROJECT TITLE}
 \newcommand{\projectdescription}{Project Description}
-\newcommand{\entitytitle}{Latex-Template}
+
+% $ ARTICLE
+\newcommand{\articletitle}{TITLE}
+% ⚠️ dependency : datetime
 % 📂 Images/[name](.ext)
-\newcommand{\logoname}{latex-template}
-% ⚠️ HREF package
+\newcommand{\customdate}{\FRENCHtoday\today}
+
+% $ LINKS
+% ⚠️ dependency : HREF package
 \newcommand{\mail}{\href{mailto:\authormail}{\authormail}}
 \newcommand{\github}{\href{https://github.com/\authorgithub/}{\authorgithub}}
 \newcommand{\githubissues}{\href{https://github.com/allemand-instable/LaTeX-Template/issues}{LaTeX-Template/issues}}
