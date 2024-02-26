@@ -1,11 +1,17 @@
-% & definition
+% ~ Toggle [content-block] Render
+%       ▶ code  blocks
+%       ▶ proof blocks
+% * definition
 \newcounter{code}
 \newcounter{proof}
-% & value
+% * Document-wide Value
 \setcounter{code}{1}
 \setcounter{proof}{0}
-% ~ if statements
+
+% $ quick COPY/PASTE :
+% * code
 \ifnum\value{code}=1
 \fi
+% * proof
 \ifnum\value{proof}=1
 \fi

@@ -1,22 +1,50 @@
+% ~ DEV
+% * ENCODING
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+% * COMMENTS
+\usepackage{comment}
+
+% ~ includegraphics
 \usepackage{graphicx}
-\usepackage{amsmath,amssymb}
-\usepackage{hyperref}
+% defining floating objects such as figures and tables
+\usepackage{float}
+
+% ~ language
 \usepackage[french]{babel}
+
+% ~ URL handling
+\usepackage{hyperref}
 \usepackage{url}
-% tables
+
+% ~ Tables
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{tabularx}
-% 
-\usepackage{pgfplots}
+
+% ~ Mathematics
+\usepackage{amsmath,amssymb}
 \usepackage{stmaryrd}
 \usepackage{mathtools}
+% plots
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
 % 
 \usepackage{algorithm2e}
+
+% ~ Page format
+% footnotes
+% page format settings : margins
+\usepackage[top=1.5cm,bottom=1.5cm,margin=2.5cm]{geometry}
 \usepackage[bottom]{footmisc}
-% ⚠️ incompatible avec d autres packages
-% \usepackage{MnSymbol}
-\usepackage{comment}
+% Multi-column/row
+\usepackage{multirow}
+\usepackage{multicol}
+
+% ~ INSERT PDF documents
+\usepackage{pdfpages}
+
+% ~ Table of Content
+\usepackage{minitoc}

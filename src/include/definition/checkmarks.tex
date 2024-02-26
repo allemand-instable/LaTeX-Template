@@ -1,0 +1,12 @@
+% 🌐 https://tex.stackexchange.com/questions/247681/how-to-create-checkbox-todo-list
+% enumitem
+\newlist{checkmarks}{itemize}{2}
+\setlist[checkmarks]{label=$\square$}
+\newlist{circledenum}{enumerate}{1}
+\setlist[circledenum]{label=\protect\circled{\arabic*}}
+% pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\checked}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+	\hspace{-2.5pt}}
+\newcommand{\crossed}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}

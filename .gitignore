@@ -303,3 +303,5 @@ TSWLatexianTemp*
 *.icloud
 
 test__code*
+
+**/.DS_Store

@@ -1,0 +1,32 @@
+\ifnum\value{code}=1
+	\begin{minted}[linenos=true, mathescape, frame=single, breaklines]{R}
+nb_points <- ncol(fdata)
+nb_ts <- nrow(fdata)
+ 
+fda_optim_basis <- fda.usc::optim.basis(
+    fdataobj = select_representative_observations_for_mean_function_fdata(fdata_ts = fdata, is_iid = is_iid),
+    type.CV = fda.usc::GCV.S,
+    W = NULL,
+    lambda = lambda_CV_look_list,
+    numbasis = num_basis__seq,
+    type.basis = "bspline",
+    verbose = TRUE
+)
+\end{minted}
+\fi
+
+another code block :
+
+\ifnum\value{code}=1
+	\begin{minted}[linenos=true, mathescape, frame=single, breaklines]{R}
+fda_optimal_basis <- ...
+fdata_obj_temp <- fda_optimal_basis[["fdata.est"]]
+fdata_obj <- fda.usc::fdata2fd(fdata_obj_temp)
+fpca_result <- fda::pca.fd(
+    fdobj = fdata_obj,
+    nharm = 3,
+    # centrer les données
+    centerfns = TRUE
+)
+\end{minted}
+\fi
