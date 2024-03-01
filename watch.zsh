@@ -1,10 +1,12 @@
+# —————————————————————————————————————
+#       AUX DIR ERROR WORKAROUND
+# —————————————————————————————————————
+
 if [ ! -d "./aux_files" ]; then
     echo "directory \"./aux_files\" does not exist"
     echo "creating directory \"./aux_files\""
     mkdir -p "./aux_files"
 fi
-
-
 # ⚠️ | fixing the error : I CANT WRITE TO FILE
 # $  | when the include is in a subfolder
 content_list=(src/content/*)
@@ -21,11 +23,16 @@ for item in "${content_list_trimmed[@]}"; do
     fi
 done
 
+# —————————————————————————————————————
 
 if [[ $1 == "-d" ]]; then
     latexmk -pdf -time -silent -pvc -bibtex "src/documentation.tex"
 elif [[ $1 == "-t" ]]; then
     latexmk -pdf -time -silent -pvc -bibtex "src/tests.tex"
+elif [[ $1 == "-a" ]]; then
+    latexmk -pdf -time -silent -pvc -bibtex "src/article.tex"
+elif [[ $1 == "-ra" ]]; then
+    latexmk -pdf -time -silent -pvc -bibtex "src/rapport_article.tex"
 elif [[ $1 == "-h" ]]; then
     echo "▶ Documentation : -d"
     echo "▶ Rapport : -r / nothing"

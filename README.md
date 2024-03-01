@@ -155,14 +155,33 @@ The project `Latex-Template` relies on the following latex packages
 | ulem          | emphasis is now underline                            | fonts.tex            |
 ---
 
+## Quick accesses to some settings
+
+### babel language :
+
+- original setting : english
+
 ```zsh
-
+code --goto src/include/packages/base.tex:14:19
 ```
 
-```latex
+### margin dimensions
 
+- original settings : 
+    - top : 1.5cm
+    - bottom : 1.5cm
+    - margin : 2.5cm
+
+```zsh
+code --goto src/include/packages/base.tex:40
 ```
 
-```python
+### Project & Render Settings
 
+```zsh
+code --goto src/include/settings/project.tex
+```
+
+```zsh
+code --goto src/include/settings/render.tex
 ```

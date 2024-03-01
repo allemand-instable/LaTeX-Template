@@ -1,0 +1,53 @@
+\documentclass[11pt]{article}
+
+% ⚠️ DO NOT TOUCH ————————————
+% * include and settings
+% ✏️ note : include should be used in document environment → use of input here
+\input{include/include.tex}
+% ⚠️ —————————————————————————
+
+
+% ⚠️ USE WHEN NO CITATION FROM BIB
+\nocite{*}
+% ⚠️ —————————————————————————
+
+
+% ⚙️ Table of Contents
+\dominitoc
+
+% * global commands
+% ⚙️ INCLUDE COMMAND
+\input{include/global_commands.tex}
+
+\begin{document}
+% ~ PRE CONTENT  ——————————————————————
+% > no page numbering
+% ⧐ couverture  [settings]
+% ⧐ abstract    [settings / abstract_text.tex]
+% ⧐ notations   [content/pre/main.tex]
+% > Roman page numbering
+% ⧐ Table of Contents
+% ⧐ Table of Figures
+% ⧐ Table of Algorithms
+\include{content/pre/main.tex}
+% ~ ———————————————————————————————————
+
+% ~ CONTENT ———————————————————————————
+% > arabic page numbering
+% $ CHAPTERS
+% * ————— ARTICLE FORMAT —————
+\include{content/article/__main__.tex}
+% ~ ———————————————————————————————————
+
+
+% ~ APPENDIX ——————————————————————————
+\appendix
+\pagenumbering{roman}
+% * ————— APPENDIX —————
+\include{content/appendix/article/__main__.tex}
+% ~ ——————————————————————————————————
+
+\typeout{}
+\bibliography{bibliography/main}
+
+\end{document}

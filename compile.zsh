@@ -1,17 +1,21 @@
+# on linux you must use a script called evince-synctex available on github at :
+# 🌐 https://github.com/Vinno97/evince-synctex
 if [[ $(uname) == "Linux" ]]; then
     echo "please launch evince-synctex manually to get synctex working !"
+
+    evince_synctex_path='$HOME/bin/evince_synctex.zsh'
+
+    # checking if evince synctex is executable
+    if [[ ! -x $evince_synctex_path ]]; then
+        echo "evince_synctex script should be exectuable, setting permission to 755"
+        chmod 0755 $evince_synctex_path;
+    fi
 else 
     echo "synctex supported by default."
 fi
 
-my $evince_synctex_path = '$HOME/bin/evince_synctex.zsh';
-
-if (!-x $evince_synctex_path) {
-    echo "evince_synctex script should be exectuable, setting permission to 755"
-    chmod 0755, $evince_synctex_path;
-}
-
-if [ ! -d "./aux_files" ]; then
+# creating aux directories manually to avoid errors on compiling
+if [[ ! -d "./aux_files" ]]; then
     echo "directory \"./aux_files\" does not exist"
     echo "creating directory \"./aux_files\""
     mkdir -p "./aux_files"
@@ -38,18 +42,27 @@ if [[ $1 == "-r" ]]; then
     latexmk -pdf -bibtex -pv -time -silent "src/rapport.tex"
 elif [[ $1 == "-t" ]]; then
     latexmk -pdf -bibtex -pv -time -silent "src/tests.tex"
+elif [[ $1 == "-a" ]]; then
+    latexmk -pdf -bibtex -pv -time -silent "src/article.tex"
+elif [[ $1 == "-ra" ]]; then
+    latexmk -pdf -bibtex -pv -time -silent "src/article.tex"
+    latexmk -pdf -bibtex -pv -time -silent "src/rapport_article.tex"
 elif [[ $1 == "-h" ]]; then
-    echo "▶ Documentation : -d"
-    echo "▶ Rapport : -r"
-    echo "▶ Tests : -t"
-    echo "▶ All : no arg"
+    echo "▶ Documentation   : -d"
+    echo "▶ Rapport         : -r"
+    echo "▶ Article         : -a"
+    echo "▶ Article⊕Rapport : -ra"
+    echo "▶ Tests           : -t"
+    echo "▶ All             : no arg"
 elif [[ $1 == "-d" ]]; then
     latexmk -pdf -bibtex -pv -time -silent "src/documentation.tex"
 else
-    echo "reminder : available arguments
-    ▶ Documentation : -d
-    ▶ Rapport : -r
-    ▶ Tests : -t
-    ▶ All : no arg"
+    echo "reminder : available arguments"
+    echo "▶ Documentation   : -d"
+    echo "▶ Rapport         : -r"
+    echo "▶ Article         : -a"
+    echo "▶ Article⊕Rapport : -ra"
+    echo "▶ Tests           : -t"
+    echo "▶ All             : no arg"
     latexmk -pdf -bibtex -pv -time
 fi
