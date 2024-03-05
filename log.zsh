@@ -5,12 +5,22 @@ if (( $# == 0 )); then
   exit 0
 fi
 
+file="rapport"
+# file="documentation"
+# file="tests"
+
 # Parse command line arguments
 while (( $# )); do
   case "$1" in
     -e|--error)
-      pattern="\!"
-      batgrep --color -i -B 0 -A 12 "${pattern}" "aux_files/rapport.log"
+      if rg -q "Here is how much of LuaTeX's memory you used" aux_files/${file}.log; then
+        # log generated using luatex
+        pattern="Error:"
+      else 
+        # log generated using pdflatex
+        pattern="\!"
+      fi
+      batgrep --color -i -B 0 -A 12 "${pattern}" "aux_files/${file}.log"
       shift
       ;;
     -w|--warning)
@@ -24,7 +34,7 @@ while (( $# )); do
       # Replace with the command for --info
       echo "Info"
       pattern="Info:"
-      batgrep --color -B 0 -A 12 "${pattern}" "aux_files/rapport.log"
+      batgrep --color -B 0 -A 12 "${pattern}" "aux_files/${file}.log"
       shift
       ;;
     -h|--help)

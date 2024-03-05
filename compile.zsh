@@ -14,6 +14,12 @@ else
     echo "synctex supported by default."
 fi
 
+# recompile fonts for lulatex
+# 🌐 https://wiki.contextgarden.net/Fonts_in_LuaTeX
+# export OSFONTDIR="$HOME/Library/Fonts/;/Library/Fonts/"
+# mtxrun --script fonts --reload
+# luaotfload-tool
+
 # creating aux directories manually to avoid errors on compiling
 if [[ ! -d "./aux_files" ]]; then
     echo "directory \"./aux_files\" does not exist"
@@ -38,15 +44,19 @@ for item in "${content_list_trimmed[@]}"; do
     fi
 done
 
+# engine :
+#       ▶ pdflatex : -pdf
+#       ▶ lualatex : -pdflua
+
 if [[ $1 == "-r" ]]; then
-    latexmk -pdf -bibtex -pv -time -silent "src/rapport.tex"
+    latexmk -bibtex -pv -time -quiet -logfilewarnings -lualatex "src/rapport.tex"
 elif [[ $1 == "-t" ]]; then
-    latexmk -pdf -bibtex -pv -time -silent "src/tests.tex"
+    latexmk -bibtex -pv -time -silent -lualatex "src/tests.tex"
 elif [[ $1 == "-a" ]]; then
-    latexmk -pdf -bibtex -pv -time -silent "src/article.tex"
+    latexmk -bibtex -pv -time -silent -lualatex "src/article.tex"
 elif [[ $1 == "-ra" ]]; then
-    latexmk -pdf -bibtex -pv -time -silent "src/article.tex"
-    latexmk -pdf -bibtex -pv -time -silent "src/rapport_article.tex"
+    latexmk -bibtex -pv -time -silent -lualatex "src/article.tex"
+    latexmk -bibtex -pv -time -silent -lualatex "src/rapport_article.tex"
 elif [[ $1 == "-h" ]]; then
     echo "▶ Documentation   : -d"
     echo "▶ Rapport         : -r"
@@ -55,7 +65,7 @@ elif [[ $1 == "-h" ]]; then
     echo "▶ Tests           : -t"
     echo "▶ All             : no arg"
 elif [[ $1 == "-d" ]]; then
-    latexmk -pdf -bibtex -pv -time -silent "src/documentation.tex"
+    latexmk -bibtex -pv -time -silent -lualatex "src/documentation.tex"
 else
     echo "reminder : available arguments"
     echo "▶ Documentation   : -d"
@@ -64,5 +74,5 @@ else
     echo "▶ Article⊕Rapport : -ra"
     echo "▶ Tests           : -t"
     echo "▶ All             : no arg"
-    latexmk -pdf -bibtex -pv -time
+    latexmk -bibtex -pv -time -lualatex
 fi

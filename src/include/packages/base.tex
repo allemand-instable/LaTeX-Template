@@ -1,7 +1,17 @@
 % ~ DEV
+\usepackage{ifluatex}
 % * ENCODING
-\usepackage[utf8]{inputenc}
+\ifluatex 
+    \usepackage{fontspec}
+\else
+    % PDF LATEX enconding needs
+    \usepackage[utf8]{inputenc}
+    % cyrillic math characters
+\fi
+% 🌐 https://tex.stackexchange.com/questions/14633/what-packages-will-let-me-use-cyrillic-characters-in-math-mode
+% \usepackage[T2A,T1]{fontenc}
 \usepackage[T1]{fontenc}
+
 % * COMMENTS
 \usepackage{comment}
 

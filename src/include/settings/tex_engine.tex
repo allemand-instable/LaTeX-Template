@@ -1,0 +1,16 @@
+% this section defines the behavior depending on the engine used for rendering latex :
+%   ▶ pdflatex
+%   ▶ luatex
+%   TODO ▶ xetex
+
+\newcounter{luatex}
+
+% ~ uncomment the right one :
+% using luatex
+\setcounter{luatex}{1}
+% using pdflatex
+\setcounter{luatex}{0}
+
+% ~ code template for luatex stuff
+\ifnum\value{luatex}=1
+\fi

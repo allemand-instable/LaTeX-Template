@@ -14,3 +14,31 @@
 %       \sout{there are errors in this text}
 %       ▶ t̶h̶e̶r̶e̶ ̶a̶r̶e̶ ̶e̶r̶r̶o̶r̶s̶ ̶i̶n̶ ̶t̶h̶i̶s̶ ̶t̶e̶x̶t̶
 \usepackage{ulem}
+% \usepackage{cyrillic}
+
+\ifluatex
+    \setmainfont{Avenir Book}
+    % \setmainfont{CMU Serif}
+
+    \setsansfont{Avenir Book}[Fractions=On]
+    \fontspec{Avenir Book}[Weight=400]
+    \fontspec{Avenir Black}[Weight=700]
+    % \setsansfont{CMU Sans Serif}
+    \setmonofont{JetBrainsMono NF Regular}
+
+    \defaultfontfeatures{Ligatures={TeX}}
+
+\else
+
+\fi
+
+
+% \makeatletter
+% \def\easycyrsymbol#1{\mathord{\mathchoice
+%   {\mbox{\fontsize\tf@size\z@\usefont{T2A}{\rmdefault}{m}{n}#1}}
+%   {\mbox{\fontsize\tf@size\z@\usefont{T2A}{\rmdefault}{m}{n}#1}}
+%   {\mbox{\fontsize\sf@size\z@\usefont{T2A}{\rmdefault}{m}{n}#1}}
+%   {\mbox{\fontsize\ssf@size\z@\usefont{T2A}{\rmdefault}{m}{n}#1}}
+% }}
+% \makeatother
+% \newcommand{\Ze}{\easycyrsymbol{\CYRZ}}

@@ -1,10 +1,8 @@
-\documentclass[11pt]{report}
+\documentclass[11pt]{article}
 % ⚠️ DO NOT TOUCH ————————————
 % * include and settings
 % ✏️ note : include should be used in document environment → use of input here
 \input{include/include.tex}
-\input{settings.tex}
-
 % ⚠️ ————————————————————————
 
 % * global commands
@@ -12,16 +10,16 @@
 \input{include/global_commands.tex}
 
 \begin{document}
-
-	% \tableofcontents
-	\chapter{Documentation}
-	% 🧠 why ?
-	% si l environnement minted n est pas appelé au moins une fois (executé), alors minted ne génère pas le fichier aux de style .pygstyle nécesaaire pour les inlines
-	\begin{phantom}
-		\begin{minted}{latex}
-		\end{minted}
-	\end{phantom}
-	\section{Packages \& Dependencies}
+	\textbf{Packages \& Dependencies}
+	\ifpdftex
+		% 🧠 why ?
+		% si l environnement minted n est pas appelé au moins une fois (executé), alors minted ne génère pas le fichier aux de style .pygstyle nécessaire pour les inlines
+		\begin{phantom}
+			\begin{minted}{latex}
+			\end{minted}
+		\end{phantom}
+	\fi
+		
 
 	\noindent\begin{tabularx}{\linewidth}{|X|X|}
 		\hline
@@ -56,10 +54,7 @@
 		\verb|mathtools|        & Provides various tools to enhance the appearance and functionality of mathematical formulas.                           \\
 		\hline
 		\verb|algorithm2e|      & Provides an environment for writing algorithms in LaTeX.                                                               \\
-	\end{tabularx}
-
-	\noindent\begin{tabularx}{\linewidth}{|X|X|}
-		% \hline
+		\hline
 		\verb|footmisc|         & Provides several options for customizing footnotes.                                                                    \\
 		\hline
 		\verb|comment|          & Provides an environment for commenting out sections of text.                                                           \\
@@ -78,6 +73,9 @@
 		\hline
 		\verb|framed|           & Provides an environment for creating framed boxes.                                                                     \\
 		\hline
+	\end{tabularx}
+
+	\noindent\begin{tabularx}{\linewidth}{|X|X|}
 		\verb|multicol|         & Provides an environment for multicolumn typesetting.                                                                   \\
 		\hline
 		\verb|awesomebox|       & Provides various types of colored boxes.                                                                               \\
