@@ -49,7 +49,7 @@ done
 #       ▶ lualatex : -pdflua
 
 if [[ $1 == "-r" ]]; then
-    latexmk -bibtex -pv -time -quiet -logfilewarnings -lualatex "src/rapport.tex"
+    latexmk -bibtex -pv -time -silent -logfilewarnings -lualatex "src/rapport.tex"
 elif [[ $1 == "-t" ]]; then
     latexmk -bibtex -pv -time -silent -lualatex "src/tests.tex"
 elif [[ $1 == "-a" ]]; then
