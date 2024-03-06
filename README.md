@@ -110,55 +110,75 @@ If the user prefers in a markdown format : it can be found [here](./doc/doc.md) 
  ┃ ┣ 📜tests.pdf                ← testing commands and environments
 ```
 
-## Packages (todo):
+## Packages :
 
-<img src="https://custom-icon-badges.demolab.com/badge/-TODO : better partition for include-f53b57?style=for-the-badge&logo=warning&logoColor=black&color=orange">
+<img src="https://custom-icon-badges.demolab.com/badge/-must be installed using your tex installation package manager-f53b57?style=for-the-badge&logo=warning&logoColor=black&color=orange">
  <!-- TODO -->
 
-The project `Latex-Template` relies on the following latex packages
+The project `Latex-Template` relies on the following latex packages to provide a better tex experience :
 
-| Package       | Used For                                             | `include/pacakges/` |
-| ------------- | ---------------------------------------------------- | -------------------- |
-| lualatex | latex engine | - |
-| inputenc      | utf-8 input                                          | base.tex             |
-| fontenc       | font encoding                                        | base.tex             |
-| graphicx      | including images                                     | base.tex             |
-| amsmath       | maths                                                | base.tex             |
-| amssymb       | maths                                                | base.tex             |
-| hyperref      | url links with custom text                           | base.tex             |
-| dsfont        | double stroke : better than `\mathbb`                | fonts.tex            |
-| babel         | french names for envs                                | base.tex             |
-| url           | typesetting URLs                                     | base.tex             |
-| pgfplots      | latex curve graphs                                   | base.tex             |
-| stmaryrd      | symbols for computer science                         | base.tex             |
-| mathtools     | convenient convergence arrows                        | base.tex             |
-| —             | —                                                    | —                    |
-| avant         | font                                                 | fonts.tex            |
-| fontawesome5  | icons [`\info` / `\warn` ...]                        | fonts.tex            |
-| mfirstuc      | capitalizing the first letter of a word              | fonts.tex            |
-| float         | improved interface for floating objects              | others.tex           |
-| multirow      | table cells spanning multiple rows                   | others.tex           |
-| awesomebox    | env with bar at the left [`\info` / `\warn` ...]     | others.tex           |
-| minitoc       | table of content of the chapter                      | tableofcontent.tex   |
-| minted        | code highlight                                       | minted.tex           |
-| table         | tables                                               | base.tex             |
-| xcdraw        | drawing tables with TikZ                             | base.tex             |
-| xcolor        | custom colors                                        | base.tex             |
-| array         | extending the array and tabular environments         | base.tex             |
-| booktabs      | publication quality tables                           | base.tex             |
-| tabularx      | beautiful tables with adjustable-width column        | base.tex             |
-| algorithm2e   | algorithm environments                               | base.tex             |
-| footmisc      | make sure footnotes are bellow                       | base.tex             |
-| comment       | commenting out large blocks of code with env         | base.tex             |
-| tikz          | creating graphics programmatically                   | others.tex           |
-| tikz-cd       | creating commutative diagrams                        | others.tex           |
-| framed        | framed or shaded regions that can break across pages | others.tex           |
-| multicol      | typesetting documents with multiple columns          | others.tex           |
-| changepage    | margin adjustment and detection of odd/even pages    | others.tex           |
-| pifont        | checkmarks for `checkmarks` environment              | others.tex           |
-| pdfpages      | include PDF documents                                | others.tex           |
-| geometry      | page margin dimensions                               | others.tex           |
-| ulem          | emphasis is now underline                            | fonts.tex            |
+| Package      | Used For                                                            | `include/pacakges/` |
+| ------------ | ------------------------------------------------------------------- | ------------------- |
+| lualatex     | latex engine (utf-8 : cyrillic characters in math mode)             | -                   |
+| ifluatex     | import and define stuff depending on the engine used (lua/pdf)latex | base.tex            |
+| —            | —                                                                   | —                   |
+| inputenc     | utf-8 input for pdflatex engine (if used)                           | base.tex            |
+| fontenc      | font encoding                                                       | base.tex            |
+| —*—          | —*—                                                                 | —*—                 |
+| graphicx     | including images                                                    | base.tex            |
+| —*—          | —*—                                                                 | —*—                 |
+| amsmath      | maths                                                               | base.tex            |
+| amssymb      | maths symbols                                                       | base.tex            |
+| stmaryrd     | symbols for computer science                                        | base.tex            |
+| amsthm       | theorem environments                                                | theorem_styles.tex  |
+| mathtools    | convenient convergence arrows                                       | base.tex            |
+| —*—          | —*—                                                                 | —*—                 |
+| hyperref     | url links with custom text                                          | base.tex            |
+| url          | typesetting URLs                                                    | base.tex            |
+| —*—          | —*—                                                                 | —*—                 |
+| babel        | french names for envs                                               | base.tex            |
+| —*—          | —*—                                                                 | —*—                 |
+| multicol     | typesetting documents with multiple columns                         | base.tex            |
+| multirow     | table cells spanning multiple rows                                  | base.tex            |
+| —*—          | —*—                                                                 | —*—                 |
+| minitoc      | table of content of the chapter                                     | base.tex            |
+| —*—          | —*—                                                                 | —*—                 |
+| xcolor       | custom colors                                                       | base.tex            |
+| float        | improved interface for floating objects                             | base.tex            |
+| —*—          | —*—                                                                 | —*—                 |
+| table        | tables                                                              | base.tex            |
+| xcdraw       | drawing tables with TikZ                                            | base.tex            |
+| array        | extending the array and tabular environments                        | base.tex            |
+| tabularx     | beautiful tables with adjustable-width column                       | base.tex            |
+| booktabs     | publication quality tables                                          | base.tex            |
+| —*—          | —*—                                                                 | —*—                 |
+| algorithm2e  | algorithm environments                                              | base.tex            |
+| comment      | commenting out large blocks of code with env                        | base.tex            |
+| —*—          | —*—                                                                 | —*—                 |
+| tikz-cd      | creating commutative diagrams                                       | base.tex            |
+| tikz         | creating graphics programmatically                                  | base.tex            |
+| pgfplots     | latex curve graphs                                                  | base.tex            |
+| —*—          | —*—                                                                 | —*—                 |
+| footmisc     | make sure footnotes are bellow                                      | base.tex            |
+| geometry     | page margin dimensions                                              | base.tex            |
+| pdfpages     | include PDF documents                                               | base.tex            |
+| —            | —                                                                   | —                   |
+| dsfont       | double stroke : better than `\mathbb`                               | fonts.tex           |
+| avant        | font (used for pdflatex sans serif font)                            | fonts.tex           |
+| fontawesome5 | icons [`\info` / `\warn` ...]                                       | fonts.tex           |
+| mfirstuc     | capitalizing the first letter of a word                             | fonts.tex           |
+| ulem         | emphasis is now underline                                           | fonts.tex           |
+| unicode-math | cyrillic letters in math mode                                       | fonts.tex           |
+| —            | —                                                                   | —                   |
+| framed       | framed or shaded regions that can break across pages                | others.tex          |
+| awesomebox   | env with bar at the left [`\info` / `\warn` ...]                    | others.tex          |
+| changepage   | margin adjustment and detection of odd/even pages                   | others.tex          |
+| enumitem     | create custom enum environments                                     | others.tex          |
+| pifont       | checkmarks for `checkmarks` environment                             | others.tex          |
+| datetime     | advanced time formatting and date commands                          | others.tex          |
+| —            | —                                                                   | —                   |
+| shellesc     | pygmentize call must use console commands                           | minted.tex          |
+| minted       | code highlight                                                      | minted.tex          |
 ---
 
 ## Quick accesses to some settings
