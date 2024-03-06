@@ -8,6 +8,11 @@
 
 A simple LaTeX Template, with nice structure, and commands for ease of use
 
+<div>
+<img src="doc/img/page_title.png" width="45%">
+<img src="doc/img/page_example_cyrillic.png" width="45%">    
+</div>
+
 
 ## Requirements / Dependencies
 
@@ -114,6 +119,7 @@ The project `Latex-Template` relies on the following latex packages
 
 | Package       | Used For                                             | `include/pacakges/` |
 | ------------- | ---------------------------------------------------- | -------------------- |
+| lualatex | latex engine | - |
 | inputenc      | utf-8 input                                          | base.tex             |
 | fontenc       | font encoding                                        | base.tex             |
 | graphicx      | including images                                     | base.tex             |
