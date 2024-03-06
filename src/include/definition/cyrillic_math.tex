@@ -1,10 +1,15 @@
+% ⚠️
+%   ▶ i     (И) → \cyri
+%   ▶ em    (М) → \cyrem
+% "cyr" added because the command already exists
+
 % $ Sha (Ш)
 % * lower case
 \newcommand*{\sha}{\mathsf{ш}}
 \newcommand*{\shait}{\mathit{ш}}
 \newcommand*{\shabf}{\mathbf{ш}}
 % * upper case
-\newcommand*{\sha}{\mathsf{Ш}}
+\newcommand*{\Sha}{\mathsf{Ш}}
 \newcommand*{\Shait}{\mathit{Ш}}
 \newcommand*{\Shabf}{\mathbf{Ш}}
 
@@ -42,7 +47,8 @@
 
 % $ Em (М)
 % * lower case
-\renewcommand*{\em}{\mathsf{м}}
+% ⚠️ \i is already taken
+\newcommand*{\cyrem}{\mathsf{м}}
 \newcommand*{\emit}{\mathit{м}}
 \newcommand*{\embf}{\mathbf{м}}
 % * upper case

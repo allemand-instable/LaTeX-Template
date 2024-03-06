@@ -6,6 +6,7 @@ if (( $# == 0 )); then
 fi
 
 file="rapport"
+file="rapport_article"
 # file="documentation"
 # file="tests"
 
