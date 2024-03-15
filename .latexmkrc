@@ -1,7 +1,7 @@
 # ~ LATEX COMMANDS
 $latex = 'latex -shell-escape -interaction=nonstopmode';
-$pdflatex = 'pdflatex -synctex=15 -shell-escape -interaction=nonstopmode';
-$lualatex = 'lualatex --debug-format --shell-escape --synctex=15 --interaction=nonstopmode';
+$pdflatex = 'pdflatex -synctex=1 -shell-escape -interaction=nonstopmode';
+$lualatex = 'lualatex --debug-format --shell-escape --interaction=nonstopmode';
 # PROJECT CODE FILES
 $do_cd= 1;
 $cd_dir="src";
