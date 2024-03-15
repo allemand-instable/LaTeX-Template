@@ -5,8 +5,9 @@ if (( $# == 0 )); then
   exit 0
 fi
 
-file="rapport"
-file="rapport_article"
+# file="rapport"
+# file="rapport_article"
+file="article"
 # file="documentation"
 # file="tests"
 
@@ -28,7 +29,7 @@ while (( $# )); do
       # Replace with the command for --warning
       echo "Warning"
       pattern="Warning:"
-      batgrep --color -B 0 -A 12 "${pattern}" "aux_files/rapport.log"
+      batgrep --color -B 0 -A 12 "${pattern}" "aux_files/${file}.log"
       shift
       ;;
     -i|--info)

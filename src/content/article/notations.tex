@@ -1,0 +1,37 @@
+The proposed model includes a variety of mathematical objects with distinct nature, but still related to each other. In this section we will introduce all the notations used throughout this paper :
+
+\smallskip
+
+$X$ is a functional random variable, whose covariance operator $C_X : \inlinefunc {\mathds L^2} {\mathds L^2} {f} {\int \mathcal c_X(u, \cdot) f(\cdot) du}$ is an integral operator where $\mathcal c_X$ is the kernel of that integral operator. Sampled data from the real world is discrete though, that's why we consider the empirical covariance matrix $\Sigma_X = \begin{bmatrix} \, \operatorname{cov}\bigl( X(t_{\ell_1}), X(t_{\ell_2}) \bigr) \, \end{bmatrix}_{1 \leq \ell_1, \ell_2 \leq L_X}$ where $L_X$ is the number of points observed on the curve X. We will therefore name $L_i$ the number of points observed on the curve $X_i$. In our problem, we do not have direct access to the covariates $\famfinie[i] X 1 N$ but a contaminated version of them. Hence, we do not have direct access to $\Sigma_X$, we must rely on an estimation of $\Sigma_X$, it is called $\Gamma_X$. Finally we call the rank of the covariance operator for the functional random variable $X$ : $r[X] \color{flatuicolors_biscay}{= \operatorname{rg} C_X}$.
+
+\smallskip
+
+note : This is a general theme in the notations used that we specify the functional random variable we are referring to inside brackets : $[X]$ for instance. This becomes especially useful when considering projections of other functional random variables on the PCA basis of \textbf{another functional random variable}.
+
+\smallskip
+
+This paper focuses on a score smoothing based approach. In order to have more lightweight notations we will use lowercase letters for the PCA scores : $x_j = \prodscalselon{X - \mathds EX}{\phi^{[\, X \,]}_j}{\mathds L^2}$. Because X is finite rank we can define $x = [ \, x_j \, ]_{1 \leq j \leq r[X]}$, the vector of $\R{r[X]}$ of the PCA scores of X. When looking at the projections on the PCA basis of another random variable, we use the following notation for the components of $W$ on the PCA basis of $X$ : $w^{[\, X \,]}_j = \prodscalselon{W - \mathds E W}{\phi_j^{[X]}}{\mathds L^2}$.
+
+\smallskip
+
+In order to keep some consistency in indexes, $i$ (ranging from $1$ to $N$) represents a functional data curve index, $\ell$ (ranging from $1$ to $L_i$) represents a time observed index, $k$ (ranging from $1$ to $r_N$) represents a PCA component index, and $j$ (ranging from $1$ to $r[X]$) represents the additive term index in the additive model used.
+
+\smallskip
+
+$K$ is the base kernel used for the deconvolution problem (epanechnikov for instance), which is then used to build the normalized deconvolution kernel $\widetilde K ^ \star$. Each function $f_{k,j}$ is therefore approximated by the SBF-solution using the deconvolution kernel, and thus named $\widehat f_{k,j}^\star$ using the bandwidth $h_{k,j}$.
+
+\smallskip
+
+We observe a total of $N$ covariate curves $\famfinie X 1 N$. On each curve $X_i$ we observe $L_i$, and $L_Y$ points on the response curve $Y$. The critical number of points needed to be able to perform the retrieval of the eigenfunctions of $C_X$ is called $L_*$ as in ~\cite[Panaretos, 2018]{panaretos2017regression}. The support of these curves is called $\mathcal T$, and a point on that support will be therefore called $t$. The interval on which we randomly observe the times $(T_i[\, \ell \,] : 1 \leq i \leq N, 1 \leq \ell \leq L_i)$, $[ T_{i, (1)}, T_{i, (L_i)}]$ is noted $I_{obs}$.
+
+\smallskip
+
+The fourier transform of a real valued function $f$ will be written as $\mathcal F[ \, f \, ]$. The characteristic function of a random variable variable $\mathbf x$ will be written $\varphi_{\mathbf x}$.
+
+\smallskip
+
+The density of the scores will be writtent as $p_x$ for the full dimensional density of $x$ on $\R{r[\,X\,]}$ w.r.t Lebesgue measure $\lambda_{r[X]}$. The 1-dimensional density of the score $x_j$ on the real line will be written as $p_{x_j}$ and the joint density between the $j_1^{th}$ and $j_2^{th}$ component will be written $p_{x_{j_1}, x_{j_2}}$. The caracteristic function of a random variable $x$ will be written as $\varphi_x$.
+
+\smallskip
+
+To make things clearer, dummy variables and fixed values will be set using cyrillic letters such as $\zheit$ or $\shait$.
