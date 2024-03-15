@@ -37,6 +37,8 @@ elif [[ $1 == "-h" ]]; then
     echo "▶ Documentation : -d"
     echo "▶ Rapport : -r / nothing"
     echo "▶ Tests : -t"
+    echo "▶ Article : -a"
+    echo "▶ Article within Rapport : -ra"
 else
     latexmk -lualatex -time -silent -pvc -bibtex "src/rapport.tex"
 fi

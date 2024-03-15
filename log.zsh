@@ -1,51 +1,82 @@
 #!/bin/zsh
+# This script looks for the error messages of desired log level for the desired file you want to compile [rapport/article/documentation/tests]
+
+usage="Usage: $0\n\t\t▶ debug level\n\t\t[--error] [--warning] [--info] [--help]\n\t\t▶ targeted file\n\t\t[--type] r/a/d/t"
 
 if (( $# == 0 )); then
-  echo "Usage: $0 [--error] [--warning] [--info] [--help]"
-  exit 0
+    echo $usage
+    exit 0
 fi
 
-file="rapport"
-file="rapport_article"
-# file="documentation"
-# file="tests"
+file="rapport" # default value
+
+# ~ parsing arguments
+#  choose the file
+#  pattern according to log level
 
 # Parse command line arguments
-while (( $# )); do
+while [[ $# -gt 0 ]]; do
   case "$1" in
     -e|--error)
-      if rg -q "Here is how much of LuaTeX's memory you used" aux_files/${file}.log; then
-        # log generated using luatex
-        pattern="Error:"
-      else 
-        # log generated using pdflatex
-        pattern="\!"
-      fi
-      batgrep --color -i -B 0 -A 12 "${pattern}" "aux_files/${file}.log"
-      shift
-      ;;
-    -w|--warning)
-      # Replace with the command for --warning
-      echo "Warning"
-      pattern="Warning:"
-      batgrep --color -B 0 -A 12 "${pattern}" "aux_files/rapport.log"
-      shift
+      # value="$2"
+        if rg -q "Here is how much of LuaTeX's memory you used" aux_files/${file}.log; then
+            # log generated using luatex
+            pattern="Error:"
+        else
+            # log generated using pdflatex
+            pattern="\!"
+        fi
+      shift # Remove argument name from processing
+      # shift # Remove argument value from processing
       ;;
     -i|--info)
-      # Replace with the command for --info
-      echo "Info"
+      # value="$2"
       pattern="Info:"
-      batgrep --color -B 0 -A 12 "${pattern}" "aux_files/${file}.log"
-      shift
+      shift # Remove argument name from processing
+      # shift # Remove argument value from processing
+      ;;
+    -w|--warning)
+      # value="$2"
+      pattern="Warning:"
+      shift # Remove argument name from processing
+      # shift # Remove argument value from processing
+      ;;
+    -t|--type)
+      value="$2"
+      if [[ -z $2 ]]; then
+        echo "please provide the file you want to compile"
+        exit 1
+      fi
+      case "$value" in
+        a|article)
+          file="rapport_article"
+        ;;
+        r|rapport)
+          file="rapport"
+        ;;
+        d|document)
+          file="documentation"
+        ;;
+        t|test)
+          file="tests"
+        ;;
+      esac
+      shift # Remove argument name from processing
+      shift # Remove argument value from processing
       ;;
     -h|--help)
-      echo "Usage: $0 [--error] [--warning] [--info] [--help]"
+      # value="$2"
+      echo "$usage"
       exit 0
+      # shift # Remove argument name from processing
+      # shift # Remove argument value from processing
       ;;
-    *)
-      echo "Unknown argument: $1"
-      echo "Usage: $0 [--error] [--warning] [--info] [--help]"
+    *)    # Unknown option
+      echo "Unknown option: $1"
       exit 1
       ;;
   esac
 done
+
+# ~ executed command
+batgrep --color -i -B 0 -A 12 "${pattern}" "aux_files/${file}.log"
