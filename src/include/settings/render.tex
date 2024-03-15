@@ -4,9 +4,11 @@
 % * definition
 \newcounter{code}
 \newcounter{proof}
+\newcounter{logoframe}
 % * Document-wide Value
 \setcounter{code}{1}
 \setcounter{proof}{0}
+\setcounter{logoframe}{1}
 
 % $ quick COPY/PASTE :
 % * code
@@ -14,4 +16,7 @@
 \fi
 % * proof
 \ifnum\value{proof}=1
+\fi
+% * logoframe
+\ifnum\value{logoframe}=1
 \fi
