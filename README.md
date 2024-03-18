@@ -1,7 +1,5 @@
 # LaTeX Template
-<img src="https://custom-icon-badges.demolab.com/github/license/allemand-instable/LaTeX-Template?style=for-the-badge&logo=law&logoColor=white&color=d2dae2">
-<img src="https://custom-icon-badges.demolab.com/github/stars/allemand-instable/LaTeX-Template?style=for-the-badge&logo=star&logoColor=yellow&color=yellow">
-<img src="https://custom-icon-badges.demolab.com/github/forks/allemand-instable/LaTeX-Template?style=for-the-badge&logo=fork&logoColor=white&color=1e272e">
+<img src="https://custom-icon-badges.demolab.com/github/license/allemand-instable/LaTeX-Template?style=for-the-badge&logo=law&logoColor=white&color=d2dae2"><img src="https://custom-icon-badges.demolab.com/github/stars/allemand-instable/LaTeX-Template?style=for-the-badge&logo=star&logoColor=yellow&color=yellow"><img src="https://custom-icon-badges.demolab.com/github/forks/allemand-instable/LaTeX-Template?style=for-the-badge&logo=fork&logoColor=white&color=1e272e">
 
 
 A simple LaTeX Template, with nice structure, and commands for ease of use
