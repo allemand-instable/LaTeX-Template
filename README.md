@@ -121,12 +121,12 @@ if you use another shell (bash/...) you might have to adapt the script [chatGPT 
 
 ## documentation
 
-The documentation [can be accessed easily in a pdf format](./out/documentation.pdf) at the location :
-
 <div>
 <img src="doc/img/docu_pdf_01.png" width="45%">
 <img src="doc/img/docu_pdf_02.png" width="45%">    
 </div>
+
+The documentation [can be accessed easily in a pdf format](./out/documentation.pdf) at the location :
 
 ```
 📦LaTeX-Template
