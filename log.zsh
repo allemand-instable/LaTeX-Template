@@ -57,9 +57,10 @@ while [[ $# -gt 0 ]]; do
         d|document)
           file="documentation"
         ;;
-        t|test)
-          file="tests"
-        ;;
+        # ℹ️ deprecated
+        # t|test)
+        #   file="tests"
+        # ;;
       esac
       shift # Remove argument name from processing
       shift # Remove argument value from processing

@@ -53,8 +53,9 @@ fi
 
 if [[ $1 == "-r" ]]; then
     latexmk -bibtex -pv -time -silent -logfilewarnings -lualatex "src/rapport.tex"
-elif [[ $1 == "-t" ]]; then
-    latexmk -bibtex -pv -time -silent -lualatex "src/tests.tex"
+# ℹ️ deprecated
+# elif [[ $1 == "-t" ]]; then
+#     latexmk -bibtex -pv -time -silent -lualatex "src/tests.tex"
 elif [[ $1 == "-a" ]]; then
     latexmk -bibtex -pv -time -silent -lualatex "src/article.tex"
 elif [[ $1 == "-ra" ]]; then
@@ -65,7 +66,8 @@ elif [[ $1 == "-h" ]]; then
     echo "▶ Rapport         : -r"
     echo "▶ Article         : -a"
     echo "▶ Article⊕Rapport : -ra"
-    echo "▶ Tests           : -t"
+    # ℹ️ deprecated
+    # echo "▶ Tests           : -t"
     echo "▶ All             : no arg"
 elif [[ $1 == "-d" ]]; then
     latexmk -bibtex -pv -time -silent -lualatex "src/documentation.tex"
@@ -75,7 +77,7 @@ else
     echo "▶ Rapport         : -r"
     echo "▶ Article         : -a"
     echo "▶ Article⊕Rapport : -ra"
-    echo "▶ Tests           : -t"
+    # echo "▶ Tests           : -t"
     echo "▶ All             : no arg"
     latexmk -bibtex -pv -time -lualatex
 fi
