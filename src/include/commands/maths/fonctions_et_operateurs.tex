@@ -6,7 +6,7 @@
 % 		1: ensemble
 % & Examples
 % 		\indicatrice{E}
-\newcommand{\indicatrice}[1]{\mathds 1 _{#1}}
+\newcommand{\indicatrice}[1]{{\mathds{1}}_{#1}}
 
 % & Name
 % 		\norme
@@ -17,7 +17,7 @@
 % 		2: vecteur
 % & Examples
 % 		\norme{\infty}{x}
-\newcommand{\norme}[2]{\left\lVert \, #2 \, \right\rVert _ {#1}}
+\newcommand{\norme}[2]{\left\lVert \, {#2} \, \right\rVert _{#1}}
 
 % & Name
 % 		\dist
@@ -28,7 +28,7 @@
 % 		2: vecteur 2
 % & Examples
 % 		\dist{x}{y}
-\newcommand{\dist}[2]{ \ \lVert #1 - #2 \rVert \ }
+\newcommand{\dist}[2]{ \ \lVert {#1} - {#2} \rVert \ }
 
 % & Name
 % 		\distnorme
@@ -40,30 +40,48 @@
 % 		3: vecteur 2
 % & Examples
 % 		\distnorme{\infty}{x}{y}
-\newcommand{\distnorme}[3]{ \norme{#1}{#2 - #3}}
+\newcommand{\distnorme}[3]{ \norme{#1}{{#2} - {#3}}}
 
 % & Name
-% 		\prodscal
+% 		\prodscal(*)
 % & Description
 % 		Produit scalaire entre deux vecteurs ⟨x|y⟩
 % & Arguments
+%     *: uses bigl and bigr instead of left and right
 % 		1: vecteur 1
 % 		2: vecteur 2
 % & Examples
 % 		\prodscal{x}{y}
-\newcommand{\prodscal}[2]{\left\langle \, #1 \, \vert \, #2 \, \right\rangle}
+\NewDocumentCommand{\prodscal}{s m m}
+{
+  \IfValueTF{#1}{%
+    \bigl\langle \, {#2} \, \vert \, {#3} \, \bigr\rangle
+  }{%
+    \left\langle \, {#2} \, \vert \, {#3} \, \right\rangle
+  }%
+}
 % & Name
-% 		\prodscalselon
+% 		\prodscalselon(*)
 % & Description
 % 		Produit scalaire [spécifié] entre deux vecteurs ⟨x|y⟩_∞
 % & Arguments
+%     *: uses bigl and bigr instead of left and right
 % 		1: vecteur 1
 % 		2: vecteur 2
 % 		3: subscript du produit scalaire
 % & Examples
 % 		\prodscalselon{x}{y}{\infty}
 
-\newcommand{\prodscalselon}[3]{\prodscal{#1}{#2}_{#3}}
+% \newcommand*{\prodscalselon}[3]{\prodscal{#2}{#3}_{#4}}
+
+\NewDocumentCommand{\prodscalselon}{s m m m}{
+  \IfValueTF{#1}
+  {%
+    \prodscal*{#2}{#3}_{#4}
+  }{%
+    \prodscal{#2}{#3}_{#4}
+  }%
+}
 
 % & Name
 % 		\argmax
@@ -172,7 +190,7 @@
 
 
 % & Name
-% 		\sp(*)
+% 		\Sp(*)
 % & Description
 % 		Spectre d'un endomorphisme ou opérateur T : sp(T)
 % & Arguments
@@ -180,20 +198,20 @@
 % 		1: application 𝓊
 % 		optionnel [] : corps du spectre
 % & Examples
-% 		\sp{u} : sp(u)
-%     \sp[K]{u} : sp_K(u)
-%     \sp* u : sp u
+% 		\Sp{u} : sp(u)
+%     \Sp[K]{u} : sp_K(u)
+%     \Sp* u : sp u
 \NewDocumentCommand{\Sp}{s o m}{%
   \IfBooleanTF{#1}
   {%
     % Starred version: \sp*
     \IfValueTF{#2}
     {%
-      % \sp[K]{u} -> sp_K(u) 
+      % \Sp[K]{u} -> sp_K(u) 
       \operatorname{sp}_{#2} {#3}%
     }
     {%
-      % \sp{u} -> sp(u)
+      % \Sp{u} -> sp(u)
       \operatorname{sp} {#3}%
     }%
   }
@@ -201,11 +219,11 @@
     % Non-starred version: \sp
     \IfValueTF{#2}
     {%
-      % \sp[K]{u} -> sp_K(u) 
+      % \Sp[K]{u} -> sp_K(u) 
       \operatorname{sp}_{#2}\bigl({#3}\bigr)%
     }
     {%
-      % \sp{u} -> sp(u)
+      % \Sp{u} -> sp(u)
       \operatorname{sp}\bigl({#3}\bigr)%
     }%
   }%
