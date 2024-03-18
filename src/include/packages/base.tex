@@ -23,7 +23,13 @@
 \usepackage{float}
 
 % ~ language
-\usepackage[english]{babel}
+\ifnum\value{french}=1
+    \usepackage[french]{babel}
+\else
+    \usepackage[english]{babel}
+    \newcommand*{\og}{\guillemotleft}
+    \newcommand*{\fg}{\guillemotright}
+\fi
 
 % ~ URL handling
 \usepackage{hyperref}
