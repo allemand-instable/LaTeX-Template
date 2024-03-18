@@ -169,3 +169,214 @@
   \mathclose{#1|\mkern-1.5mu#1|\mkern-1.5mu#1|}
 }
 \makeatother
+
+
+% & Name
+% 		\sp(*)
+% & Description
+% 		Spectre d'un endomorphisme ou opérateur T : sp(T)
+% & Arguments
+%     *: sans les parenthèses
+% 		1: application 𝓊
+% 		optionnel [] : corps du spectre
+% & Examples
+% 		\sp{u} : sp(u)
+%     \sp[K]{u} : sp_K(u)
+%     \sp* u : sp u
+\NewDocumentCommand{\Sp}{s o m}{%
+  \IfBooleanTF{#1}
+  {%
+    % Starred version: \sp*
+    \IfValueTF{#2}
+    {%
+      % \sp[K]{u} -> sp_K(u) 
+      \operatorname{sp}_{#2} {#3}%
+    }
+    {%
+      % \sp{u} -> sp(u)
+      \operatorname{sp} {#3}%
+    }%
+  }
+  {%
+    % Non-starred version: \sp
+    \IfValueTF{#2}
+    {%
+      % \sp[K]{u} -> sp_K(u) 
+      \operatorname{sp}_{#2}\bigl({#3}\bigr)%
+    }
+    {%
+      % \sp{u} -> sp(u)
+      \operatorname{sp}\bigl({#3}\bigr)%
+    }%
+  }%
+}
+
+
+% & Name
+% 		\spvec(*)
+% & Description
+% 		Vecteurs propres d'un endomorphisme ou opérateur T : vec{sp}(T)
+% & Arguments
+%     *: sans les parenthèses
+% 		1: application 𝓊
+% 		optionnel [] : corps du spectre
+% & Examples
+% 		\spvec{u} : vec{sp}(u)
+\NewDocumentCommand{\spvec}{s o m}{%
+  \IfBooleanTF{#1}
+  {%
+    % Starred version: \spvec*
+    \IfValueTF{#2}
+    {%
+      % \spvec*[K]{u} -> sp_K u 
+      \overrightarrow{\operatorname{sp}}_{#2} {#3}%
+    }
+    {%
+      % \sp*{u} -> sp u
+      \overrightarrow{\operatorname{sp}} {#3}%
+    }%
+  }
+  {%
+    % Non-starred version: \sp
+    \IfValueTF{#2}
+    {%
+      % \spvec[K]{u} -> sp_K(u) 
+      \overrightarrow{\operatorname{sp}}_{#2}\bigl({#3}\bigr)%
+    }
+    {%
+      % \spvec{u} -> sp(u)
+      \overrightarrow{\operatorname{sp}}\bigl({#3}\bigr)%
+    }%
+  }%
+}
+
+% & Name
+% 		\spvecortho(*)
+% & Description
+% 		Vecteurs propres orthonormés d'un endomorphisme ou opérateur T : vec{sp}[ ⟂/‖⋅‖ ](T)
+% & Arguments
+%     *: sans les parenthèses
+% 		optionnel [] : corps du spectre
+% 		1: application 𝓊
+% 		optionnel [] : norme considérée
+% & Examples
+% 		\spvecortho[K]{u}[\infty] : vec{sp}_K[ ⟂/‖⋅‖∞ ](u)
+\NewDocumentCommand{\spvecortho}{s o m o}{%
+  \IfBooleanTF{#1}
+  {%
+    % Starred version: \spvec*
+    \IfValueTF{#2}
+    {%
+      % \spvec*[K]{u} -> sp_K u 
+      \IfValueTF{#4}
+      {%
+      \overrightarrow{\operatorname{sp}}_{#2}\bigl[\, \vcenter{\hbox{$\underset{\| \cdot \|_{#4}}{\perp}$}} \,\bigr] \, {#3}%
+      }%
+      {%
+        \overrightarrow{\operatorname{sp}}_{#2}\bigl[\, \vcenter{\hbox{$\underset{\| \cdot \|{\perp}$}}} \,\bigr] \, {#3}%
+      }%
+    }
+    {%
+      % \sp*{u} -> sp u
+      \IfValueTF{#4}{%
+        \overrightarrow{\operatorname{sp}}\bigl[\, \vcenter{\hbox{$\underset{\| \cdot \|_{#4}}{\perp}$}} \,\bigr] \, {#3}%
+      }{%
+        \overrightarrow{\operatorname{sp}}\bigl[\, \vcenter{\hbox{$\underset{\| \cdot \|{\perp}$}}} \,\bigr] \,{#3}%
+      }%
+    }%
+  }%
+  {%
+    % Non-starred version: \sp
+    \IfValueTF{#2}
+    {%
+      % \spvec[K]{u} -> sp_K(u) 
+      \IfValueTF{#4}{%
+        \overrightarrow{\operatorname{sp}}\bigl[\, \vcenter{\hbox{$\underset{\| \cdot \|_{#4}}{\perp}$}} \,\bigr]\bigl({#3}\bigr)%
+      }{%
+        \overrightarrow{\operatorname{sp}}\bigl[\, \vcenter{\hbox{$\underset{\| \cdot \|{\perp}$}}} \,\bigr]\bigl({#3}\bigr)%
+      }%
+    }%
+    {%
+      % \spvec{u} -> sp(u)
+      \IfValueTF{#4}{%
+        \overrightarrow{\operatorname{sp}}\bigl[\, \vcenter{\hbox{$\underset{\| \cdot \|}{\perp}$}} \,\bigr]\bigl({#3}\bigr)%
+      }{%
+        \overrightarrow{\operatorname{sp}}\bigl[\, \vcenter{\hbox{$\underset{\| \cdot \|{\perp}$}}} \,\bigr]\bigl({#3}\bigr)%
+      }%
+    }%
+  }%
+}
+
+
+% & Name
+% 		\inlinefunc
+% & Description
+% 		Notations standarde d'une application en inline
+%  		E → F : 𝑥 ↦ 𝑓(𝑥)
+%     avec les variations suivantes
+%         ▶ {E}[𝑥]{F}[𝑦]: E → F : 𝑥 ↦ 𝑦
+%  		  > prio ensembles
+%         ▶ {E}{F}      : E → F 
+%         ▶ {E}[𝑥]{F}   : 𝑥 ∈ E → F
+%         ▶ {E}{F}[𝑦]   : E → F ∋ 𝑦
+%       > prio objets (*)
+%         ▶ *{𝑥}{𝑦}     : 𝑥 ↦ 𝑦
+%         ▶ *{𝑥}[E]{𝑦}  : E ∋ 𝑥 ↦ 𝑦 
+%         ▶ *{𝑥}{𝑦}[F]  : 𝑥 ↦ 𝑦 ∈ F
+% & Arguments
+%         ▶ {E}[𝑥]{F}[𝑦]: E → F : 𝑥 ↦ 𝑦
+%  		  > prio ensembles
+%         ▶ {E}{F}      : E → F 
+%         ▶ {E}[𝑥]{F}   : 𝑥 ∈ E → F
+%         ▶ {E}{F}[𝑦]   : E → F ∋ 𝑦
+%       > prio objets (*)
+%         ▶ *{𝑥}{𝑦}     : 𝑥 ↦ 𝑦
+%         ▶ *{𝑥}[E]{𝑦}  : E ∋ 𝑥 ↦ 𝑦 
+%         ▶ *{𝑥}{𝑦}[F]  : 𝑥 ↦ 𝑦 ∈ F
+% & Examples
+% 		f : \inlinefunc{E}[x]{F}[y]
+%  ⚠️ différent de : (priorité objet)
+%     f : \inlinefunc*{x}[E]{y}[F]
+\NewDocumentCommand{\inlinefunc}{s m o m o}{
+    \IfValueTF{#1}{%
+      % ~ star (*)
+      % set as mandatory
+      \IfValueTF{#3}{%
+        \IfValueTF{#5}{%
+          % !     *{x}[E]{y}[F]
+          {#2} \rightarrow {#4} \,:\, {#3} \mapsto {#5}%
+        }{%
+          % !     *{x}[E]{y}
+          {#3} \ni {#2} \mapsto {#4}%
+        }%
+      }{%
+        \IfValueTF{#5}{%
+          % !     *{x}{y}[F]
+          {#2} \mapsto {#4} \in {#5}%
+        }{%
+          % !     *{x}{y}
+          {#2} \mapsto {#4}%
+        }%
+      }%
+    }{%
+      % ~ non star
+      % value as mandatory
+      \IfValueTF{#3}{%
+        \IfValueTF{#5}{%
+          % !   {E}[x]{F}[y]
+          {#3} \rightarrow {#5} \,:\, {#2} \mapsto {#4}%
+        }{%
+          % !   {E}[x]{F}
+          {#3} \in {#2} \rightarrow {#4}%
+        }%
+      }{%
+        \IfValueTF{#5}{%
+          % !   {E}{F}[y]
+          {#2} \rightarrow {#4} \ni {#5}%
+        }{%
+          % !   {E}{F}
+          {#2} \rightarrow {#4}%
+        }%
+      }%
+    }%
+}

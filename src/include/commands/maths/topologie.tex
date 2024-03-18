@@ -1,0 +1,36 @@
+% & Name
+%       \vois
+% & Description
+%       ensemble des voisinages de 𝑥₀ : 𝒱(𝑥₀)
+% & Arguments
+%       1 : point d'intérêt 𝑥₀
+% & Examples
+%       1 : \vois{ x_0 }
+%       donne : 𝒱(𝑥₀)
+\newcommand*{\vois}[1]{\mathcal{V}\bigl( \, {#1} \, \bigr)}
+
+
+% & Name
+%       \voisselon
+% & Description
+%       ensemble des voisinages de 𝑥₀ pour la topologie 𝒯
+% & Arguments
+%       1 : Topologie considérée — 𝒯 
+%       2 : point d'intérêt — 𝑥₀
+% & Examples
+%       1 : \voisselon{\mathcal T}{ x_0 }
+%       donne 𝒱_{𝒯}(𝑥₀)
+\newcommand*{\voisselon}[2]{\mathcal{V}_{#2}\bigl( \, {#2} \, \bigr)}
+
+
+% & Name
+%       \voisnorm
+% & Description
+%       ensemble des voisinages de 𝑥₀ pour la topologie induite par la norme spécifiée
+% & Arguments
+%       1 : norme considérée
+%       2 : point d'intérêt — 𝑥₀
+% & Examples
+%       1 : \voisnorm{\infty}{ x_0 }
+%       donne 𝒱_{‖⋅‖_∞}(𝑥₀)
+\newcommand*{\voisnorm}[2]{\mathcal{V}_{\Vert \, \cdot \, \Vert_{#1}}\bigl( \, {#2} \, \bigr)}

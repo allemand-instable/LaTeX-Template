@@ -73,3 +73,16 @@
 % & Examples
 %       \esploisach{p}{X}{Y}
 \newcommand{\esploisach}[3]{{\mathds{E}}_{#1}\left[ \, #3 \, \vert \, #2 \, \right]}
+
+
+% & Name
+%       \va
+% & Description
+%       Variable Aléatoire sur un espace E : 𝕍A[E]
+% & Arguments
+%       1 : Espace
+% & Examples
+%       \va{E}
+%       donne : 
+%           𝕍A[E]
+\NewDocumentCommand{\va}{m}{\operatorname{\mathbb{V}A}\bigl[\,{#1}\,\bigr]}
