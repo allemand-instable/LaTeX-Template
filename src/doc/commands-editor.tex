@@ -1,0 +1,25 @@
+\subsection{Commands for Editing}
+
+\noindent\begin{tabularx}{\linewidth}{X}
+    \toprule
+    \textbf{commands/editor/\faAsterisk}                                                                            \\
+    \midrule
+    \textbf{Description}                                                                                            \\
+    Commands meant to be used as warnings / info for the author for writting that are displayed on the rendered pdf \\
+    \midrule
+\end{tabularx}
+\noindent\begin{tabularx}{\linewidth}{XXXX}
+    \textbf{Command}                     & \textbf{location}    & \textbf{Description}                                               & \textbf{Example}          \\
+    % ————————————————————————————————————————————————————————————
+    \midrule
+
+    \mintinline{latex}{\citationrequise} & \tcolorize{main.tex} & Avertissement pour l'éditeur : une citation est à insérer ici      & \citationrequise          \\ \\
+
+    \mintinline{latex}{\exemplerequis}   & \tcolorize{main.tex} & Avertissement pour l'éditeur : un exemple est à insérer ici        & \exemplerequis            \\ \\
+
+    \mintinline{latex}{\editorwarn}      & \tcolorize{main.tex} & Avertissement pour l'éditeur                                       & \editorwarn{texte custom} \\ \\
+
+    \mintinline{latex}{\editlater}       & \tcolorize{main.tex} & Avertissement pour l'éditeur : une modification est à apporter ici & \editlater{texte custom}  \\ \\
+    \bottomrule
+    % ————————————————————————————————————————————————————————————
+\end{tabularx}

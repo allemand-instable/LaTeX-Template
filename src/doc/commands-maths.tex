@@ -1,0 +1,17 @@
+\subsection{Commands for Math Environment}
+\ifluatex
+    \begin{luacode*}
+        for i = 1, 7 do
+            local filename = "doc/maths/cmd_maths-" .. i .. ".tex"
+            tex.sprint("\\input{" .. filename .. "}")
+        end
+    \end{luacode*}    
+\else
+    \input{doc/maths/cmd_maths-1.tex}
+    \input{doc/maths/cmd_maths-2.tex}
+    \input{doc/maths/cmd_maths-3.tex}
+    \input{doc/maths/cmd_maths-4.tex}
+    \input{doc/maths/cmd_maths-5.tex}
+    \input{doc/maths/cmd_maths-6.tex}
+    \input{doc/maths/cmd_maths-7.tex}
+\fi

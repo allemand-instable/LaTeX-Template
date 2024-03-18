@@ -1,0 +1,10 @@
+\ifluatex
+    \begin{luacode*}
+        for i = 1, 2 do
+            local filename = "doc/dep/dependencies-" .. i .. ".tex"
+            tex.sprint("\\input{" .. filename .. "}")
+        end
+    \end{luacode*} 
+\else
+    \nope{USE LUATEX TO RENDER}
+\fi

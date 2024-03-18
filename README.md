@@ -36,6 +36,34 @@ A simple LaTeX Template, with nice structure, and commands for ease of use
 | [macos] skim       | pdf viewer                                                        | [official website](https://skim-app.sourceforge.io/)                     |
 | [windows] gsview32 | pdf viewer                                                        |                                                                          |
 
+### why LuaTex ?
+
+LuaTex supports utf-8 characters from the get go, which is nice when you want to use cyrillic letters as I do in my mathematics notations.
+
+
+The integration of lua within latex allows for much more flexible documents, and sometimes coding in latex much faster, for instance if you want to input `name-[number].tex` files and then modify, add new files, remove some, ... It is much easier to just modify the range rather than deleting or adding complete lines on `\input{...}` :
+
+```latex
+\ifluatex
+    % with luatex
+    \begin{luacode*}
+        for i = 1, 7 do
+            local filename = "doc/maths/cmd_maths-" .. i .. ".tex"
+            tex.sprint("\\input{" .. filename .. "}")
+        end
+    \end{luacode*}    
+\else
+    % without luatex
+    \input{doc/maths/cmd_maths-1.tex}
+    \input{doc/maths/cmd_maths-2.tex}
+    \input{doc/maths/cmd_maths-3.tex}
+    \input{doc/maths/cmd_maths-4.tex}
+    \input{doc/maths/cmd_maths-5.tex}
+    \input{doc/maths/cmd_maths-6.tex}
+    \input{doc/maths/cmd_maths-7.tex}
+\fi
+```
+
 ## compiling and watching using `latexmk` :
 
 <a  href="https://mg.readthedocs.io/latexmk.html">
