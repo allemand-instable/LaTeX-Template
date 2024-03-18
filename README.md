@@ -121,7 +121,7 @@ if you use another shell (bash/...) you might have to adapt the script [chatGPT 
 
 ## documentation
 
-The documentation can be accessed easily in a pdf format at the location :
+The documentation [can be accessed easily in a pdf format](./out/documentation.pdf) at the location :
 
 ```
 📦LaTeX-Template
@@ -131,7 +131,7 @@ The documentation can be accessed easily in a pdf format at the location :
  ┃ ┣ 📜tests.pdf
 ```
 
-If the user prefers in a markdown format : it can be found [here](./doc/doc.md) (📁 `doc/doc.md`)
+(⚠️ incomplete, for now use the pdf) If the user prefers in a markdown format : it can be found [here](./doc/doc.md) (📁 `doc/doc.md`)
 
 ## testing
 
