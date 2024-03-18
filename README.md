@@ -23,7 +23,13 @@ A simple LaTeX Template, with nice structure, and commands for ease of use
 <a  href="https://mg.readthedocs.io/latexmk.html">
     <img src="https://custom-icon-badges.demolab.com/badge/Compiling tool-Latexmk-575fcf?style=for-the-badge&logo=gear&logoColor=white">
 </a>
-
+<br/>
+<a  href="https://www.luatex.org">
+    <img src="https://custom-icon-badges.demolab.com/badge/Tex Engine-LuaTex-yellow?style=for-the-badge&logo=gear&logoColor=white">
+</a>
+<a  href="https://ctan.org/pkg/pdftex">
+    <img src="https://custom-icon-badges.demolab.com/badge/Secondary Tex Engine-pdfTex-yellow?style=for-the-badge&logo=gear&logoColor=white">
+</a>
 
 | software           | what for ?                                                        | installation link                                                        |
 | ------------------ | ----------------------------------------------------------------- | ------------------------------------------------------------------------ |
@@ -55,8 +61,11 @@ zsh watch.zsh
 ### flags
 
 ```zsh
-zsh compile.zsh -d      # compiles documentation only
+# —— compile & watch flags ———
 zsh compile.zsh -r      # compiles report only
+zsh compile.zsh -a      # compiles article only
+zsh compile.zsh -ra     # compiles article combined with report
+zsh compile.zsh -d      # compiles documentation only
 zsh compile.zsh -t      # compiles tests only
 zsh compile.zsh -h      # flags help
 # —— Exclusive to compile ———
