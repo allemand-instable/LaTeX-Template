@@ -19,13 +19,13 @@ while [[ $# -gt 0 ]]; do
   case "$1" in
     -e|--error)
       # value="$2"
-        if rg -q "Here is how much of LuaTeX's memory you used" aux_files/${file}.log; then
+        # if rg -q "Here is how much of LuaTeX's memory you used" aux_files/${file}.log; then
             # log generated using luatex
-            pattern="Error:"
-        else
+            pattern="^(Error:|!).*"
+        # else
             # log generated using pdflatex
-            pattern="\!"
-        fi
+            # pattern="\!"
+        # fi
       shift # Remove argument name from processing
       # shift # Remove argument value from processing
       ;;
