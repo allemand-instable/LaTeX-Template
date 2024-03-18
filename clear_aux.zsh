@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 rm **/*.mtc*
 rm **/*.out
 # rm **/*.synctex*

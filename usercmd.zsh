@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 function print_help() {
     echo "alias \"esync\", \"esyncstatus\" and \"killesync\" do not exist on system"
     echo "using vanilla commands"

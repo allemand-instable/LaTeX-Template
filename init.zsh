@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 echo "which path do you want to initiate the project to ? ▶"
 read destination
 
