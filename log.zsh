@@ -5,6 +5,7 @@ usage="Usage: $0\n\t\t▶ debug level\n\t\t[--error] [--warning] [--info] [--hel
 
 if (( $# == 0 )); then
     echo $usage
+    echo "known bug : pass -t before level -e/-w/-i"
     exit 0
 fi
 
@@ -18,14 +19,7 @@ file="rapport" # default value
 while [[ $# -gt 0 ]]; do
   case "$1" in
     -e|--error)
-      # value="$2"
-        # if rg -q "Here is how much of LuaTeX's memory you used" aux_files/${file}.log; then
-            # log generated using luatex
-            pattern="^(Error:|!).*"
-        # else
-            # log generated using pdflatex
-            # pattern="\!"
-        # fi
+      pattern="^(Error:|!).*"
       shift # Remove argument name from processing
       # shift # Remove argument value from processing
       ;;

@@ -5,7 +5,7 @@ $lualatex = 'lualatex --debug-format --shell-escape --synctex=15 --interaction=n
 # PROJECT CODE FILES
 $do_cd= 1;
 $cd_dir="src";
-@default_files = ('src/rapport.tex', 'src/documentation.tex', 'src/tests.tex');
+@default_files = ('src/rapport.tex', 'src/documentation.tex', 'src/article.tex', 'src/rapport_article.tex');
 # ~ OUTPUT FILES
 $pdf_mode=1; # use pdflatex
 # $dvi_mode=0; # render dvi

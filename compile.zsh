@@ -16,19 +16,12 @@ if [[ "$1" != "-h" ]]; then
         echo "synctex supported by default."
     fi
 
-    # recompile fonts for lulatex
-    # 🌐 https://wiki.contextgarden.net/Fonts_in_LuaTeX
-    # export OSFONTDIR="$HOME/Library/Fonts/;/Library/Fonts/"
-    # mtxrun --script fonts --reload
-    # luaotfload-tool
-
     # creating aux directories manually to avoid errors on compiling
     if [[ ! -d "./aux_files" ]]; then
         echo "directory \"./aux_files\" does not exist"
         echo "creating directory \"./aux_files\""
         mkdir -p "./aux_files"
     fi
-
 
     # ⚠️ | fixing the error : I CANT WRITE TO FILE
     # $  | when the include is in a subfolder
@@ -53,9 +46,6 @@ fi
 
 if [[ $1 == "-r" ]]; then
     latexmk -bibtex -pv -time -silent -logfilewarnings -lualatex "src/rapport.tex"
-# ℹ️ deprecated
-# elif [[ $1 == "-t" ]]; then
-#     latexmk -bibtex -pv -time -silent -lualatex "src/tests.tex"
 elif [[ $1 == "-a" ]]; then
     latexmk -bibtex -pv -time -silent -lualatex "src/article.tex"
 elif [[ $1 == "-ra" ]]; then
@@ -66,8 +56,6 @@ elif [[ $1 == "-h" ]]; then
     echo "▶ Rapport         : -r"
     echo "▶ Article         : -a"
     echo "▶ Article⊕Rapport : -ra"
-    # ℹ️ deprecated
-    # echo "▶ Tests           : -t"
     echo "▶ All             : no arg"
 elif [[ $1 == "-d" ]]; then
     latexmk -bibtex -pv -time -silent -lualatex "src/documentation.tex"
@@ -77,7 +65,6 @@ else
     echo "▶ Rapport         : -r"
     echo "▶ Article         : -a"
     echo "▶ Article⊕Rapport : -ra"
-    # echo "▶ Tests           : -t"
     echo "▶ All             : no arg"
     latexmk -bibtex -pv -time -lualatex
 fi

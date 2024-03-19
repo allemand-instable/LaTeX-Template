@@ -29,9 +29,6 @@ done
 
 if [[ $1 == "-d" ]]; then
     latexmk -lualatex -time -silent -pvc -bibtex "src/documentation.tex"
-# ℹ️ deprecated
-# elif [[ $1 == "-t" ]]; then
-#     latexmk -lualatex -time -silent -pvc -bibtex "src/tests.tex"
 elif [[ $1 == "-a" ]]; then
     latexmk -lualatex -time -silent -pvc -bibtex "src/article.tex"
 elif [[ $1 == "-ra" ]]; then
@@ -39,8 +36,6 @@ elif [[ $1 == "-ra" ]]; then
 elif [[ $1 == "-h" ]]; then
     echo "▶ Documentation : -d"
     echo "▶ Rapport : -r / nothing"
-    # ℹ️ deprecated
-    # echo "▶ Tests : -t"
     echo "▶ Article : -a"
     echo "▶ Article within Rapport : -ra"
 else
