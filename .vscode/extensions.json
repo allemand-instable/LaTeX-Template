@@ -1,8 +1,8 @@
 {
     "recommendations": [
+        "efoerster.texlab",
+        "christian-kohler.path-intellisense",
         "allemandinstable.colorful-comments-refreshed",
-        "james-yu.latex-workshop",
-        "tecosaur.latex-utilities",
-        "oijaz.unicode-latex"
+        "howcasperwhat.comment-formula"
     ]
 }
