@@ -6,6 +6,7 @@ usage="Usage: $0\n\t\t▶ debug level\n\t\t[--error] [--warning] [--info] [--hel
 if (( $# == 0 )); then
     echo $usage
     echo "known bug : pass -t before level -e/-w/-i"
+    echo "example : zsh log.zsh -t r -e"
     exit 0
 fi
 

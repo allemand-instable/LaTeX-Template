@@ -1,12 +1,26 @@
 #!/bin/zsh
 
+function help(){
+    echo "▶ Report : -r"
+    echo "▶ Article : -a"
+    echo "▶ Article within report : -ra"
+    echo "▶ Documentation : -d"
+    echo "▶ Verbose mode : -v"
+}
+
+function watch(){
+    latexmk -lualatex -time -silent -pvc -bibtex "src/${1}.tex"
+}
+
 # —————————————————————————————————————
 #       AUX DIR ERROR WORKAROUND
 # —————————————————————————————————————
 
 if [ ! -d "./aux_files" ]; then
-    echo "directory \"./aux_files\" does not exist"
-    echo "creating directory \"./aux_files\""
+    if [[ $1 == "-v" || $2 == "-v" ]]; then
+        echo "directory \"./aux_files\" does not exist"
+        echo "creating directory \"./aux_files\""
+    fi
     mkdir -p "./aux_files"
 fi
 # ⚠️ | fixing the error : I CANT WRITE TO FILE
@@ -16,28 +30,29 @@ content_list=(src/content/*)
 content_list_trimmed=("${content_list[@]/#src\//}")
 
 for item in "${content_list_trimmed[@]}"; do
-    echo "checking if directory $item is available in aux_files..."
+    if [[ $1 == "-v" || $2 == "-v" ]]; then
+        echo "checking if directory $item is available in aux_files..."
+    fi
     if [ ! -d "aux_files/$item" ]; then
-        echo "creating directory $item in aux_files..."
+        if [[ $1 == "-v" || $2 == "-v" ]]; then
+            echo "creating directory $item in aux_files..."
+        fi
         mkdir -p "aux_files/$item"
     else
-        echo "directory $item already exists in aux_files..."
+        if [[ $1 == "-v" || $2 == "-v" ]]; then
+            echo "directory $item already exists in aux_files..."
+        fi
     fi
 done
 
 # —————————————————————————————————————
 
-if [[ $1 == "-d" ]]; then
-    latexmk -lualatex -time -silent -pvc -bibtex "src/documentation.tex"
-elif [[ $1 == "-a" ]]; then
-    latexmk -lualatex -time -silent -pvc -bibtex "src/article.tex"
-elif [[ $1 == "-ra" ]]; then
-    latexmk -lualatex -time -silent -pvc -bibtex "src/rapport_article.tex"
-elif [[ $1 == "-h" ]]; then
-    echo "▶ Documentation : -d"
-    echo "▶ Rapport : -r / nothing"
-    echo "▶ Article : -a"
-    echo "▶ Article within Rapport : -ra"
-else
-    latexmk -lualatex -time -silent -pvc -bibtex "src/rapport.tex"
-fi
+
+case $1 in
+    "-r") watch "rapport";;
+    "-a") watch "article";;
+    "-ra") watch "rapport_article";;
+    "-d") watch "documentation";;
+    "-h") help;;
+    *) help ;;
+esac
