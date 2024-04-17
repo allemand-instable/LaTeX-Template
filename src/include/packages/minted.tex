@@ -19,25 +19,6 @@
 % }
 
 
-% \RequirePackage{keyval}
-% \RequirePackage{kvoptions}
-% \RequirePackage{fvextra}[2022/11/30]
-% \RequirePackage{ifthen}
-% \IfFileExists{shellesc.sty}
-% 	{\RequirePackage{shellesc}
-% 		\@ifpackagelater{shellesc}{2016/04/29}
-% 		{}
-% 		{\protected\def\ShellEscape{\immediate\write18 }}}
-% 	{\protected\def\ShellEscape{\immediate\write18 }}
-% \RequirePackage{ifplatform}
-% \RequirePackage{pdftexcmds}
-% \RequirePackage{etoolbox}
-% \RequirePackage{xstring}
-% \RequirePackage{lineno}
-% \RequirePackage{framed}
-% \RequirePackage{catchfile}
-
-
 \ifnum\value{code}=1
 	\usepackage{shellesc}
 	\usepackage[cache=true, outputdir={\detokenize{../aux_files}} ]{minted}
