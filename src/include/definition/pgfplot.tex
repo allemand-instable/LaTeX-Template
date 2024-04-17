@@ -1,3 +1,15 @@
+% & Name
+% 		weierstrass
+% & Description
+% 		Weierstrass function for pgf plot
+% & Arguments
+%		todo : savoir ce que font les parametres 2 et 3
+% 		1: 𝑥
+%		2: a
+%		3: b
+% & Examples
+% 		courbe de weierstrass dans un tikzplot entre 0 et 1 
+% 		\addplot [flatuicolors_green, samples=800, domain=0:1.1] {weierstrass(2*x,2,15)};
 \makeatletter
 \pgfmathdeclarefunction{weierstrass}{3}{%
 	\pgfmathfloattofixed@{#3}%
