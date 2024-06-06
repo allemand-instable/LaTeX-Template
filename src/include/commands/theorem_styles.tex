@@ -21,12 +21,35 @@
 {0pt}%                                     % Indent amount
 {\bfseries}%                            % Theorem head font
 { }%                                    % Punctuation after theorem head
-{\newline}%                                    % Space after theorem head, ' ', or \newline
+{\newline}%                                    % Space after theorem head, ' ', or 
+{\newline}% 
+
+\newtheoremstyle{S_hyp_style}%
+{3pt}% Space above
+{3pt}% Space below
+{\itshape}% Body font
+{}% Indent amount
+{\bfseries}% Theorem head font
+{}% Punctuation after theorem head
+{0pt}% Space after theorem head
+{(S\thmnumber{#2})}% Theorem head spec (can be left empty, meaning ‘normal’)
+
+\begin{luacode*}
+    function
+\end{luacode*}
+
+
+
+\newtheoremstyle{rem_style}%                % Name
+{5pt}%                                     % Space above
+{5pt}%                                     % Space below
+% {\itshape}%
+{}                             % Body font
+{0pt}%                                     % Indent amount
+{\emph}%                            % Theorem head font
+{ :}%                                    % Punctuation after theorem head
+{.5em}%                                    % Space after theorem head, ' ', or \newline
 {}% 
-
-
-% \theorembodyfont{\sffamily}
-% \theoremheaderfont{\bfseries}
 
 %% ========================================= %%
 
@@ -61,19 +84,10 @@
 
 \newtheorem*{exo*}{Exercice}
 
-\newtheoremstyle{rem_style}%                % Name
-{5pt}%                                     % Space above
-{5pt}%                                     % Space below
-% {\itshape}%
-{}                             % Body font
-{0pt}%                                     % Indent amount
-{\emph}%                            % Theorem head font
-{ :}%                                    % Punctuation after theorem head
-{.5em}%                                    % Space after theorem head, ' ', or \newline
-{}% 
+
 
 \theoremstyle{rem_style}
-\newtheorem*{rem}{Remarque}
+\newtheorem*{rem}{Remark}
 
 
 %% ========================================= %%

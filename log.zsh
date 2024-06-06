@@ -3,14 +3,14 @@
 
 usage="Usage: $0\n\t\t▶ debug level\n\t\t[--error] [--warning] [--info] [--help]\n\t\t▶ targeted file\n\t\t[--type] r/a/d/t"
 
+file="article"
+
 if (( $# == 0 )); then
     echo $usage
     echo "known bug : pass -t before level -e/-w/-i"
     echo "example : zsh log.zsh -t r -e"
     exit 0
 fi
-
-file="rapport" # default value
 
 # ~ parsing arguments
 #  choose the file
@@ -35,30 +35,6 @@ while [[ $# -gt 0 ]]; do
       pattern="Warning:"
       shift # Remove argument name from processing
       # shift # Remove argument value from processing
-      ;;
-    -t|--type)
-      value="$2"
-      if [[ -z $2 ]]; then
-        echo "please provide the file you want to compile"
-        exit 1
-      fi
-      case "$value" in
-        a|article)
-          file="rapport_article"
-        ;;
-        r|rapport)
-          file="rapport"
-        ;;
-        d|document)
-          file="documentation"
-        ;;
-        # ℹ️ deprecated
-        # t|test)
-        #   file="tests"
-        # ;;
-      esac
-      shift # Remove argument name from processing
-      shift # Remove argument value from processing
       ;;
     -h|--help)
       # value="$2"

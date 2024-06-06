@@ -70,12 +70,14 @@ function compile_all(){
     latexmk -bibtex -pv -time -lualatex
 }
 
-case $1 in
-    -r) compile "rapport";;
-    -a) compile "article";;
-    -ra) compile "rapport_article";;
-    -d) compile "documentation";;
-    -h) help;;
-    -all) compile_all;;
-    *) echo "non valid argument : $1\n" && help;;
-esac
+# case $1 in
+#     -r) compile "rapport";;
+#     -a) compile "article";;
+#     -ra) compile "rapport_article";;
+#     -d) compile "documentation";;
+#     -h) help;;
+#     -all) compile_all;;
+#     *) echo "non valid argument : $1\n" && help;;
+# esac
+
+compile "article"

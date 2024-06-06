@@ -1,0 +1,14 @@
+\ifluatex
+\begin{luacode*}
+    function include_all_files_in_directory()
+        local current_tex = "\jobname.tex"
+        local current_dir = lfs.currentdir()
+
+        for file in lfs.dir(current_dir) do
+            if file ~= current_file and string.match(file, "%.tex$") then
+                tex.sprint("\\input{" .. file .. "}")
+            end 
+        end 
+    end
+\end{luacode*}
+\fi

@@ -48,11 +48,13 @@ done
 # —————————————————————————————————————
 
 
-case $1 in
-    "-r") watch "rapport";;
-    "-a") watch "article";;
-    "-ra") watch "rapport_article";;
-    "-d") watch "documentation";;
-    "-h") help;;
-    *) help ;;
-esac
+# case $1 in
+#     "-r") watch "rapport";;
+#     "-a") watch "article";;
+#     "-ra") watch "rapport_article";;
+#     "-d") watch "documentation";;
+#     "-h") help;;
+#     *) help ;;
+# esac
+
+watch "article"
