@@ -2,6 +2,8 @@
 % \usepackage{theorem}
 \usepackage{amsthm}
 
+
+% ~ Theorem Style Definitions
 \newtheoremstyle{def_style}%                % Name
 {10pt}%                                     % Space above
 {10pt}%                                     % Space below
@@ -24,42 +26,15 @@
 {\newline}%                                    % Space after theorem head, ' ', or \newline
 {}% 
 
-
-% \theorembodyfont{\sffamily}
-% \theoremheaderfont{\bfseries}
-
-%% ========================================= %%
-
-\theoremstyle{def_style}
-
-\newtheorem{definition}{Définition}
-\newtheorem*{definition*}{Définition}
-
-%% ========================================= %%
-
-\theoremstyle{thm_style}
-
-\newtheorem{thm}{Théorème}
-
-\newtheorem{prop}{Proposition}[thm]
-
-\newtheorem{lem}{Lemme}[thm]
-
-\newtheorem{cor}{Corollaire}
-
-\newtheorem*{thm*}{Théorème}
-
-\newtheorem*{propriete*}{Propriété}
-
-\newtheorem*{cor*}{Corollaire}
-
-\newtheorem*{prop*}{Proposition}
-
-\newtheorem*{lem*}{Lemme}
-
-\newtheorem{exo}{Exercice}
-
-\newtheorem*{exo*}{Exercice}
+\newtheoremstyle{hyp_style} % name
+{3pt}% Space above
+{3pt}% Space below
+{\itshape}% Body font
+{}% Indent amount
+{\bfseries}% Theorem head font
+{}% Punctuation after theorem head
+{0pt}% Space after theorem head
+{(S\thmnumber{#2})}% Theorem head spec (can be left empty, meaning ‘normal’)
 
 \newtheoremstyle{rem_style}%                % Name
 {5pt}%                                     % Space above
@@ -72,8 +47,36 @@
 {.5em}%                                    % Space after theorem head, ' ', or \newline
 {}% 
 
-\theoremstyle{rem_style}
-\newtheorem*{rem}{Remarque}
+% \theorembodyfont{\sffamily}
+% \theoremheaderfont{\bfseries}
 
 
+% ~ Theorem Definitions
+
+%% ========================================= %%
+\theoremstyle{hyp_style} \newtheorem{hypo}{Hypothèse}
+%% ========================================= %%
+\theoremstyle{def_style}
+\newtheorem{definition}{Définition}
+\newtheorem*{definition*}{Définition}
+%% ========================================= %%
+\theoremstyle{thm_style}
+\newtheorem{thm}{Théorème}
+\newtheorem*{thm*}{Théorème}
+% 
+\newtheorem{prop}{Proposition}[thm]
+\newtheorem*{prop*}{Proposition}
+% 
+\newtheorem{lem}{Lemme}[thm]
+\newtheorem*{lem*}{Lemme}
+% 
+\newtheorem{cor}{Corollaire}
+\newtheorem*{cor*}{Corollaire}
+% 
+\newtheorem{exo}{Exercice}
+\newtheorem*{exo*}{Exercice}
+% 
+\newtheorem*{propriete*}{Propriété}
+%% ========================================= %%
+\theoremstyle{rem_style} \newtheorem*{rem}{Remarque}
 %% ========================================= %%
