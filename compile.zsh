@@ -6,7 +6,7 @@ function help(){
     echo "▶ Rapport         : -r"
     echo "▶ Article         : -a"
     echo "▶ Article⊕Rapport : -ra"
-    echo "▶ All             : no arg"
+    echo "▶ All             : -all"
 }
 
 function errorhack(){
