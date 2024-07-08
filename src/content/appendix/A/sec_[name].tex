@@ -1,0 +1,35 @@
+% \nl : numéroter la ligne
+% \Comment*[l]{text} : commentaire en ligne
+% \; : fin d'opération
+\begin{algorithm}[H]
+    \normalem
+    \caption{title}
+    \KwData{
+        \underline{\textit{data\_1}} : $D_1$
+
+        \underline{\textit{data\_2}} : $D_2$
+    }
+    \BlankLine
+    \KwIn{
+        \underline{\textit{input\_1}} : $x_1$
+
+        \underline{\textit{input\_2}} : $x_2$
+    }
+    \BlankLine
+    \KwResult{
+        \underline{\textit{output\_1}} : $y$
+    }
+    \BlankLine
+    \Comment*[l]{inline comment with math $\vec a$}
+    \nl do stuff \;
+    \While{condition with $m\vec ath$}{
+        some stuff happening, but line is not numbered \;
+        \For{$k \in \intervaleint 1 d$}
+        {
+            \Comment*[l]{1. another one}
+            \nl step 1 : do it \;
+            \Comment*[l]{2. and another one}
+            \nl step 2 : make your dreams come $\mathfrak{true}$ \;
+        }
+    }
+\end{algorithm}
