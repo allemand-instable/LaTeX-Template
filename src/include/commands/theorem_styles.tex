@@ -24,19 +24,25 @@
 {\newline}%                                    % Space after theorem head, ' ', or 
 {\newline}% 
 
-\newtheoremstyle{S_hyp_style}%
-{3pt}% Space above
-{3pt}% Space below
-{\itshape}% Body font
-{}% Indent amount
-{\bfseries}% Theorem head font
-{}% Punctuation after theorem head
-{0pt}% Space after theorem head
-{(S\thmnumber{#2})}% Theorem head spec (can be left empty, meaning ‘normal’)
+\newcommand{\newHypoLetterThm}[1]{%
+  \newtheoremstyle{hyp_style_#1}% name
+  {3pt}% Space above
+  {3pt}% Space below
+  {\itshape}% Body font
+  {}% Indent amount
+  {\bfseries}% Theorem head font
+  {}% Punctuation after theorem head
+  {0pt}% Space after theorem head
+  {(#1\thmnumber{##2})}% Theorem head spec (can be left empty, meaning ‘normal’)
+  \theoremstyle{hyp_style_#1} \newtheorem{hyp#1}{Assumption}
+}
 
-\begin{luacode*}
-    function
-\end{luacode*}
+% \newHypoLetterThm{S}
+% \newHypoLetterThm{H}
+% \newHypoLetterThm{A}
+% \newHypoLetterThm{B}
+% \newHypoLetterThm{C}
+% \newHypoLetterThm{D}
 
 
 
